@@ -1,7 +1,7 @@
 cat ~/.cache/wal/sequences &
 ## Set values
 function fish_greeting
-    cal -3
+    cal -y
 end
 
 # Format man pages
@@ -96,6 +96,17 @@ function copy
         command cp $argv
     end
 end
+# yazi config
+function yy
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
+end
+
+
 set EDITOR nvim
 source ~/.config/terminalrcs/functions.fish
 source ~/.config/terminalrcs/aliases.sh

@@ -49,3 +49,8 @@ Desktop/
 .config/kde.org
 .config/micro/buffers
 .config/nvim
+.config/session
+.config/QtProject.conf
+.config/krusaderrc
+.config/trashrc
+.zcompdump
