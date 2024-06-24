@@ -72,3 +72,4 @@ go
 .config/baloofileinformationrc
 .config/NuGet
 .nuget/packages
+.config/WebCord
