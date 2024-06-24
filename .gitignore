@@ -53,6 +53,7 @@ Desktop/
 .config/QtProject.conf
 .config/krusaderrc
 .config/trashrc
+Pictures/Screenshots
 .zcompdump
 Obsidian
 .java
@@ -64,3 +65,4 @@ logs
 .config/khotkeysrc
 .config/kdeglobals
 .config/kconf_updaterc
+go
