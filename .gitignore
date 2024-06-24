@@ -55,3 +55,6 @@ Desktop/
 .config/trashrc
 .zcompdump
 Obsidian
+.java
+jexiftoolgui_data
+logs
