@@ -55,7 +55,6 @@
   "return-type": "json",
     "interval": "5m",
     "exec": "~/.config/waybar/scripts/updates.sh -j",
-    "exec-if": "sleep 0.1", 
     "on-click": "$TERMINAL sh ~/.config/waybar/scripts/updates.sh -u"
 },
 

@@ -58,3 +58,6 @@ Obsidian
 .java
 jexiftoolgui_data
 logs
+.anydesk
+.zenmap
+.config/cachyos-hello.json
