@@ -70,3 +70,5 @@ go
 .config/user-dirs.locale
 
 .config/baloofileinformationrc
+.config/NuGet
+.nuget/packages

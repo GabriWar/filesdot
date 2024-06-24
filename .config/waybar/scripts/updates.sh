@@ -18,6 +18,9 @@ if [ "$1" = "-u" ]; then
 		snap refresh
 	fi
 	sh ~/.config/waybar/scripts/waybar.sh &
+	echo "System updated"
+	echo "press enter to close"
+	read -r
 	exit
 fi
 
@@ -63,7 +66,7 @@ tooltip=$(cat /tmp/pendingupdates)
 #if j is passed return as json
 if [ "$1" = "-j" ]; then
 	if [ $sum -eq 0 ]; then
-		echo "{\"text\":\"\", \"tooltip\":\"No updates available\",class=\"empty\"}"
+		echo "{\"text\":\"\", \"tooltip\":\"No updates available\",\"class\":\"empty\"}"
 	fi
 	#if not equals to zero
 	if [ $sum -ne 0 ]; then
