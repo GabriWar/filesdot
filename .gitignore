@@ -66,3 +66,6 @@ logs
 .config/kdeglobals
 .config/kconf_updaterc
 go
+.congig/user-dirs.dirs
+.config/user-dirs.locale
+
