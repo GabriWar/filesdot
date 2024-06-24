@@ -61,3 +61,6 @@ logs
 .anydesk
 .zenmap
 .config/cachyos-hello.json
+.config/khotkeysrc
+.config/kdeglobals
+.config/kconf_updaterc

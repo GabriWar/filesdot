@@ -1,3 +1,6 @@
+[$Version]
+update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detailsmodesettings.upd:move-content-display,dolphin_directorysizemode.upd:convert-directorysizecount-to-directorysizemode
+
 [General]
 Version=202
 ViewPropsTimestamp=2024,6,22,21,16,40.257
