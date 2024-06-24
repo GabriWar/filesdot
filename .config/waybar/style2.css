@@ -133,19 +133,20 @@ window#waybar.empty #window {
 }
 
 /* -----------------------------------------------------
- * Idle Inhibator
+ * Idle Inhibtor
  * ----------------------------------------------------- */
 
 #idle_inhibitor {
-  font-weight: bold;
+  background-color: @backgroundlight;
+  color: @textcolor2;
+  border-radius: 100px;
+  padding: 0px 10px 0px 10px;
   opacity: 0.8;
-  color: @iconcolor;
 }
 
 #idle_inhibitor.activated {
-  font-weight: bold;
-  opacity: 0.8;
-  color: #dc2f2f;
+  background-color: @backgroundlight;
+  color: @textcolor2;
 }
 
 /* -----------------------------------------------------
@@ -263,6 +264,7 @@ window#waybar.empty #window {
 
 #tray {
   padding: 0px 5px 0px 5px;
+  background-color: @backgrounddark;
   border-radius: 100px;
   color: @textcolor2;
   transition: all 0s linear;
@@ -399,4 +401,25 @@ window#waybar.empty #window {
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
   opacity: 0.8;
+}
+/* -----------------------------------------------------
+ *power custom 
+ * ----------------------------------------------------- */
+#custom-quit,
+#custom-lock,
+#custom-reboot,
+#custom-power,
+#custom-suspendhibernate {
+  background-color: @backgroundlight;
+  color: @textcolor2;
+  border-radius: 100px;
+  padding: 0px 10px 0px 10px;
+  opacity: 0.8;
+}
+.not-power {
+  background-color: @backgrounddark;
+  color: @textcolor2;
+  border-radius: 100px;
+  margin: 0px 10px 10px 10px;
+  padding: 0px 10px 10px 10px;
 }
