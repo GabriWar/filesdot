@@ -8,9 +8,8 @@ alias cat="bat"
 alias find="fd"
 # Get fastest mirrors on cachy
 alias mirror="sudo cachyos-rate-mirrors"
-# sudo funny
-alias please='sudo'
-alias plz='sudo'
+# sudo keeping the environment variables
+alias plz='sudo -E -s'
 # Cleanup orphaned packages
 alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
 # Get the error messages from journalctl
