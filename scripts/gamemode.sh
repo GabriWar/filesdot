@@ -9,6 +9,12 @@ if [ "$HYPRGAMEMODE" = 1 ]; then
         keyword general:gaps_out 0;\
         keyword general:border_size 1;\
         keyword decoration:rounding 0"
+	killall -q waybar
+	killall -q swww
+	killall -q swww-daemon
 	exit
 fi
-hyprctl reload
+hyprctl reload &
+swww-daemon &
+sh ~/scripts/waybar.sh &
+exit
