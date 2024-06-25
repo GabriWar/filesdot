@@ -23,6 +23,7 @@ echo preload = $full_path >>~/.config/hypr/hyprpaper.conf
 echo wallpaper = ,$full_path >>~/.config/hypr/hyprpaper.conf
 echo splash = true >>~/.config/hypr/hyprpaper.conf
 echo ipc = false >>~/.config/hypr/hyprpaper.conf
+killall -q swww
 swww img $full_path --transition-type random --transition-step 1 --transition-fps 90
 wal --saturate $saturate -q -i $full_path -n -e
 exit
