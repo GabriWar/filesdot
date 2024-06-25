@@ -3,7 +3,7 @@
   "layer": "top", "position": "top",
   "modules-left": ["group/group-hours","hyprland/workspaces", "hyprland/window", "group/group-icons", "custom/updates"],
   "modules-center": [""],
-  "modules-right":[ "privacy","custom/spotify", "pulseaudio", "network", "cpu","temperature","memory", "group/group-power" ],
+  "modules-right":[ "privacy","custom/spotify", "pulseaudio", "network", "cpu","temperature","memory","custom/notification", "group/group-power" ],
 
   "reload_style_on_change":true,
   "hyprland/workspaces": {
@@ -26,6 +26,11 @@
         "width": 30,
         "icon": true
 },
+
+    "custom/notification":{
+    	"format": "󱅫",
+    	"on-click": "swaync-client -t -sw"
+  },
  "temperature": {
     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
@@ -130,11 +135,11 @@
 "custom/graphics": {
     "format": "{}",
   "return-type": "json",
-    "interval": "100",
-    "exec": "~/scripts/nvidia.sh",
-    "on-click": "$TERMINAL sh ~/scripts/nvidia.sh -n",
-    "on-click-middle": "$TERMINAL sh ~/scripts/nvidia.sh -i",
-    "on-click-right": "$TERMINAL sh ~/scripts/nvidia.sh -h"
+    "interval": "1",
+    "exec": "~/scripts/graphics.sh",
+    "on-click": "$TERMINAL sudo sh ~/scripts/graphics.sh -n",
+    "on-click-middle": "$TERMINAL sudo sh ~/scripts/graphics.sh -i",
+    "on-click-right": "$TERMINAL sudo sh ~/scripts/graph.sh -h"
 },
 
 

@@ -17,7 +17,7 @@ if [ "$1" = "-u" ]; then
 	if [ -x "$(command -v snap)" ]; then
 		snap refresh
 	fi
-	sh ~/scripts/waybar.sh &
+	killall -q waybar
 	echo "System updated"
 	echo "press enter to close"
 	read -r
