@@ -2,7 +2,7 @@
 {
   "layer": "top", "position": "top",
   "modules-left": ["group/group-hours","hyprland/workspaces", "hyprland/window", "group/group-icons", "custom/updates"],
-  "modules-center": ["custom/graphics"],
+  "modules-center": [""],
   "modules-right":[ "privacy","custom/spotify", "pulseaudio", "network", "cpu","temperature","memory", "group/group-power" ],
 
   "reload_style_on_change":true,
@@ -50,6 +50,7 @@
     },
     "modules": [
         "battery",
+      "custom/graphics",
       "idle_inhibitor",
       "custom/suspendhibernate",
         "custom/power",
