@@ -73,3 +73,5 @@ go
 .config/NuGet
 .nuget/packages
 .config/WebCord
+.config/btop/btop.log
+.config/kwalletrc

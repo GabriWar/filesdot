@@ -325,3 +325,9 @@ on  = [ "y" ]
 run = [ "yank", '''
 	shell --confirm 'for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list'
 ''' ]
+[[manager.prepend_keymap]]
+on   = [ "<C-,>" ]
+run  = 'shell --confirm "~/.config/hypr/scripts/randomwall.sh $1 "'
+
+desc = "Open shell here"
+
