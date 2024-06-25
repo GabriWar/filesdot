@@ -2,7 +2,7 @@
 {
   "layer": "top", "position": "top",
   "modules-left": ["group/group-hours","hyprland/workspaces", "hyprland/window", "group/group-icons", "custom/updates"],
-  "modules-center": [],
+  "modules-center": ["custom/graphics"],
   "modules-right":[ "privacy","custom/spotify", "pulseaudio", "network", "cpu","temperature","memory", "group/group-power" ],
 
   "reload_style_on_change":true,
@@ -114,13 +114,28 @@
     ]
 },
 "custom/updates": {
-    "exec-on-event": true,
     "format": "{} ",
   "return-type": "json",
     "interval": "5m",
-    "exec": "~/.config/waybar/scripts/updates.sh -j",
-    "on-click": "$TERMINAL sh ~/.config/waybar/scripts/updates.sh -u"
+    "exec": "~/scripts/updates.sh -j",
+    "on-click": "$TERMINAL sh ~/scripts/updates.sh -u"
 },
+  "custom/gpu-usage": {
+  "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+  "format": "GPU: {}%",
+  "return-type": "",
+  "interval": 1
+},
+"custom/graphics": {
+    "format": "{}",
+  "return-type": "json",
+    "interval": "100",
+    "exec": "~/scripts/nvidia.sh",
+    "on-click": "$TERMINAL sh ~/scripts/nvidia.sh -n",
+    "on-click-middle": "$TERMINAL sh ~/scripts/nvidia.sh -i",
+    "on-click-right": "$TERMINAL sh ~/scripts/nvidia.sh -h"
+},
+
 
 
 
@@ -332,7 +347,7 @@
     "show-passiv-items": true
   },
 "custom/spotify": {
-    "exec": "/usr/bin/python3 ~/.config/hypr/scripts/mediaplayer.py --player spotify",
+    "exec": "/usr/bin/python3 ~/scripts/mediaplayer.py --player spotify",
     "format": "{}  ",
     "return-type": "json",
     "on-click": "playerctl play-pause",
