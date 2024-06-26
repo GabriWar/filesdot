@@ -1,5 +1,4 @@
-source ~/.cache/wal/colors.css
-#entry {
+source ~ /.cache/wal/colors.css #entry {
   border-radius: 5px;
   padding: 5px 2px 5px 2px;
   margin: 0px 4px 0px 4px;
@@ -16,7 +15,7 @@ source ~/.cache/wal/colors.css
 
 #entry:selected {
   color: @colorD;
-  background-color:@foreground;
+  background-color: @foreground;
   padding: 7px;
 }
 
