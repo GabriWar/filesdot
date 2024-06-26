@@ -1,1 +1,1 @@
-bind \el 'fzfg'
+bind \ez 'fzfg'
