@@ -1,22 +1,11 @@
-#!/bin/bash
-
-entries="⇠ Logout\n⏾ Suspend\n⭮ Reboot\n⏻ Shutdown"
-
-selected=$(echo -e $entries | wofi --width 250 --height 240 --dmenu --cache-file /dev/null | awk '{print tolower($2)}')
-
-case $selected in
-logout)
-	pkill -KILL -u $USER
-
-	;;
-suspend)
-	exec systemctl suspend
-	;;
-reboot)
-	exec systemctl reboot
-	;;
-shutdown)
-	exec systemctl poweroff
-	;;
-	# it used to be poweroff -i
+#! /usr/bin/bash
+#
+chosen=$(printf "󰐥 Power Off\n Restart\n󰤄 Suspend\n Log out" | rofi -dmenu -i -l 3)
+case "$chosen" in
+"󰐥 Power Off") shutdown now ;;
+" Restart") reboot ;;
+"󰒲 Suspend") systemctl suspend ;;
+"󰋊 Hybernate") systemctl hibernate ;;
+" Log out") hyprland exit ;;
+*) exit 1 ;;
 esac

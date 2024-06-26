@@ -83,3 +83,5 @@ go
 .steam
 .steampath
 .steampid
+.config/vlc
+.config/kiorc

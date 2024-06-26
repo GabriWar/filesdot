@@ -282,8 +282,7 @@ window#waybar.empty #window {
 #tray.empty {
   background-color: transparent;
   color: rgba(0, 0, 0, 0);
-  border: 0px;
-  padding: 0px;
+  padding: 10px;
   font-size: 0px;
 }
 /* -----------------------------------------------------
