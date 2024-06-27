@@ -1,6 +1,10 @@
 #!/bin/bash
+
 # Change to the wallpapers directory
 cd ~/Pictures/wallpapers || exit
+#remove spaces
+for file in *\ *; do mv "$file" "${file// /_}"; done
+
 # Get a random wallpaper file
 wallpaper=$(ls | shuf -n 1)
 
