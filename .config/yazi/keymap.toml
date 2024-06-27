@@ -327,7 +327,10 @@ run = [ "yank", '''
 ''' ]
 [[manager.prepend_keymap]]
 on   = [ "<C-,>" ]
-run  = 'shell --confirm "~/.config/hypr/scripts/randomwall.sh $1 "'
-
-desc = "Open shell here"
+run  = 'shell --confirm "~/scripts/randomwall.sh $1 "'
+desc = "Set as wallpaper"
+[[manager.prepend_keymap]]
+on   = [ "<C-x>" ]
+run  = 'shell --confirm "chmod +x $*"'
+desc = "make executable"
 
