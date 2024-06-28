@@ -105,7 +105,7 @@ function yy
     end
     rm -f -- "$tmp"
 end
-
+zoxide init fish | source
 pyenv init - | source
 set EDITOR nvim
 source ~/.config/terminalrcs/functions.fish

@@ -1,4 +1,5 @@
 # Replace ls with eza cat with bat and find with fd
+export FZF_DEFAULT_OPTS='--preview "bat --color=always {}"'
 alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
 alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
 alias ll='eza -l --color=always --group-directories-first --icons'  # long format
@@ -23,8 +24,6 @@ alias rm="rm -vI"
 ### bunch of useful aliasses
 #############
 alias cls="clear"
-alias ..="cd .."
-alias cd..="cd .."
 alias home="cd ~"
 alias df="df -ahiT --total"
 alias mkdir="mkdir -pv"
@@ -70,3 +69,6 @@ alias big="expac -H M '%m\t%n' | sort -h | nl"     # Sort installed packages acc
 alias gitpkg='pacman -Q | grep -i "\-git" | wc -l' # List amount of -git packages
 alias update='sudo pacman -Syu'
 alias chx='chmod +x *'
+alias cd='z'
+alias cdz='z $(fzf)'
+alias zf='fd --type f | fzf --preview "bat --color=always {}"'
