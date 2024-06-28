@@ -1,5 +1,6 @@
-#!/usr/bin/bash
-
+#!/usr/bin/env bash
+#start the thingy
+. ~/.pyenv/versions/waybar/bin/activate
 # Terminate already running bar instances
 
 killall -q waybar

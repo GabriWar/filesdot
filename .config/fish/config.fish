@@ -106,8 +106,10 @@ function yy
     rm -f -- "$tmp"
 end
 
-
+pyenv init - | source
 set EDITOR nvim
 source ~/.config/terminalrcs/functions.fish
 source ~/.config/terminalrcs/aliases.sh
 source ~/.config/terminalrcs/binds.sh
+
+fish_add_path /home/gabriwar/.spicetify

@@ -3,7 +3,8 @@
   "layer": "top", "position": "top",
   "modules-left": ["group/group-hours","hyprland/workspaces", "hyprland/window", "group/group-icons", "custom/updates"],
   "modules-center": [""],
-  "modules-right":[ "privacy","custom/spotify", "pulseaudio", "network", "cpu","temperature","memory","custom/notification", "group/group-power" ],
+  "modules-right":[ "privacy","image","custom/mediaplayer", "pulseaudio", "network", "cpu","temperature","memory","custom/notification", "group/group-power" ],
+
 
   "reload_style_on_change":true,
   "hyprland/workspaces": {
@@ -25,6 +26,22 @@
         "height": 30,
         "width": 30,
         "icon": true
+},"image": {
+  "path": "/tmp/waybar-mediaplayer-art",
+  "size": 25,
+  "signal": 4,
+  "on-click": "feh --auto-zoom --borderless --title 'feh-float' /tmp/waybar-mediaplayer-art"
+},
+
+"custom/mediaplayer": {
+    "exec": "$HOME/.config/waybar/waybar-mediaplayer/src/mediaplayer monitor",
+    "return-type": "json",
+    "format": "{}",
+    "on-click": "$HOME/.config/waybar/waybar-mediaplayer/src/mediaplayer play-pause",
+    "on-scroll-up": "$HOME/.config/waybar/waybar-mediaplayer/src/mediaplayer next",
+    "on-scroll-down": "$HOME/.config/waybar/waybar-mediaplayer/src/mediaplayer previous",
+    "min-length": 20,
+    "max-length": 20
 },
 
     "custom/notification":{
@@ -95,7 +112,7 @@
 "custom/lock": {
     "format": "󰍁",
     "tooltip": false,
-    "on-click": "hyprlock"
+    "on-click": "$HOME/scripts/lock.sh"
 },
 "custom/reboot": {
     "format": "󰜉",

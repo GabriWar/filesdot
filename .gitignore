@@ -97,3 +97,11 @@ Downloads
 .viminfo
 .bash_history
 logs.txt
+.config/spicetify
+.pyenv
+.spicetify
+SHARE
+scripts/rofi-desktop
+.i18n
+install.log
+.config/waybar/waybar-mediaplayer

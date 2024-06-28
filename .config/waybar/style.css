@@ -14,3 +14,9 @@
 @define-color iconcolor #FFFFFF;
 
 @import "style2.css";
+/* needed for the mediaplayer */
+#custom-mediaplayer {
+  font-size: 16px;
+  border-radius: 2%;
+}
+@import "./waybar-mediaplayer/src/style.css";
