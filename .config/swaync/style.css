@@ -1,8 +1,8 @@
-@import "../../.cache/wal/colors-waybar.css";
+@import "../../.cache/wal/colors-swaync.css";
 @define-color bgc
   rgba(0, 0, 0, 0.1);
 
-@define-color textc rgba(0, 0, 0, 0.2);
+@define-color textc rgba(255, 0, 0, 1);
 
 * {
   font-family: JetBrains Mono;
@@ -24,21 +24,21 @@
 }
 
 .notification {
-  background: @textc;
+  background: rgba(0, 0, 0, 0.2);
   margin: 0px;
   border-radius: 20px;
   border-color: @color1;
 }
 
 .notification-content {
-  background: @textc;
+  background: rgba(0, 0, 0, 0.2);
   padding: 7px;
   margin: 0;
   border-radius: 20px;
 }
 
 .close-button {
-  background: @textc;
+  background: rgba(0, 0, 0, 0.2);
   color: @color2;
   text-shadow: none;
   padding: 0;
@@ -50,14 +50,14 @@
 .close-button:hover {
   box-shadow: none;
   background: @color10;
-  color: @textc;
+  color: @color14;
   transition: all 0.15s ease-in-out;
   border: none;
 }
 
 .notification-action {
   border-radius: 20px;
-  color: @textc;
+  color: @color12;
   border-top: none;
   border-radius: 0px 0px 20px 20px;
   background: @bgc;
@@ -65,8 +65,8 @@
 
 .notification-default-action:hover,
 .notification-action:hover {
-  color: @bgc;
-  background: @textc;
+  color: @color6;
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 20px;
 }
 
@@ -133,7 +133,7 @@
 
 .widget-title > button:hover {
   background: @color8;
-  color: #282828;
+  color: @color5;
 }
 
 .widget-dnd {
@@ -150,7 +150,7 @@
 }
 
 .widget-dnd > switch:checked {
-  background: #d79921;
+  background: @color5;
 }
 
 .widget-dnd > switch slider {
@@ -169,7 +169,7 @@
 
 .widget-label > label {
   font-size: 1rem;
-  color: @textc;
+  color: @color11;
 }
 
 .widget-mpris {
