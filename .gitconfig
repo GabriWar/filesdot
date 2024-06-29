@@ -6,5 +6,6 @@
 	helper = !/usr/bin/gh auth git-credential
 [user]
 	email = gabrielduarteg02@gmail.com
+	name = Gabriel Duarte Guerra
 [safe]
 	directory = /home/gabriwar
