@@ -16,6 +16,9 @@ cd $USRHOME/.config/waybar/ || exit
 git clone https://github.com/gabriwar/waybar-mediaplayer
 cd waybar-mediaplayer || exit
 pyenv install 3.12.0
+git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 pyenv virtualenv 3.12.0 waybar
 pyenv activate waybar
 pip3 install -r requirements.txt
+sudo systemctl enable nbfc
+sudo systemctl start nbfc

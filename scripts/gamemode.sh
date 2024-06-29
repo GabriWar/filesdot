@@ -12,9 +12,11 @@ if [ "$HYPRGAMEMODE" = 1 ]; then
 	killall -q waybar
 	killall -q swww
 	killall -q swww-daemon
+	nbfc set -s 100
 	exit
 fi
 hyprctl reload &
 swww-daemon &
 sh ~/scripts/waybar.sh &
+nbfc set -a
 exit

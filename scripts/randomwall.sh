@@ -1,12 +1,20 @@
 #!/bin/bash
-# Change to the wallpapers directory
+
 cd ~/Pictures/wallpapers || exit
-# Get a random wallpaper file
-wallpaper=$(ls | shuf -n 1)
+#delete the cache if is more than half of the directory
+if [ $(wc -l <~/.cache/wal/wallpapers) -gt $(ls | wc -l) / 2 ]; then
+	rm -f ~/.cache/wal/wallpapers
+fi
+# Get a random wallpaper file, only jpg, png and gif files
+wallpaper=$(ls | grep -E ".*\.(jpg|png|gif)" | shuf -n 1)
+#check if the file is in the cache, if so we choose another
+while grep -q $wallpaper ~/.cache/wal/wallpapers; do
+	wallpaper=$(ls | grep -E ".*\.(jpg|png|gif)" | shuf -n 1)
+done
+echo $wallpaper >~/.cache/wal/wallpapers
 
 #pick a random number between 0 and 1 to saturate the colorscheme
 saturate=$(awk -v min=0.2 -v max=1.0 'BEGIN{srand(); print min+rand()*(max-min)}')
-
 # Print the selected wallpaper
 full_path=$(pwd)/$wallpaper
 #if path is passed as argument skip the above
