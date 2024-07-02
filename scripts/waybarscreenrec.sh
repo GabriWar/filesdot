@@ -11,12 +11,12 @@ WF_RECORDER_OPTS=""
 # Insert `--audio` if you want to record audio
 # Specify video codec
 # find available video codecs with `ffmpeg -encoders`
-WF_RECORDER_OPTS="$WF_RECORDER_OPTS --codec libvpx"
+WF_RECORDER_OPTS="$WF_RECORDER_OPTS --codec libx264"
 # Specify audio codec
 # find available audio codecs with `ffmpeg -codecs`
 # WF_RECORDER_OPTS="$WF_RECORDER_OPTS --audio --codec opus"
 # printf "WF_RECORDER_OPTS=%s\n" "$WF_RECORDER_OPTS"
-VIDEOEXT="webm"
+VIDEOEXT="mp4"
 
 if [ "$1" == "status" ]; then
 	if [ -s "$pidf" ]; then
