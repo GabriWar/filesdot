@@ -125,3 +125,4 @@ virtual machines
 .swt
 .nuxtrc
 a.out
+.config/hypr/hyprpaper.conf
