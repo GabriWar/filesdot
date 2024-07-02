@@ -4,6 +4,7 @@
   "modules-left": [
     "group/group-hours",
     "hyprland/workspaces",
+    "custom/screenrecorder",
     "hyprland/window",
     "group/group-icons",
     "custom/updates"
@@ -402,5 +403,15 @@
     "interval": "20m",
     "exec": "~/scripts/currency.sh usd brl",
     "on-click": " $BROWSER https://br.investing.com/currencies/usd-brl"
-  }
+  },
+"custom/screenrecorder": {
+    "exec": "$HOME/scripts/waybarscreenrec.sh status",
+    "interval": "once",
+    "signal": 1,
+    "return-type": "json",
+    "tooltip": true,
+    "format": "{}",
+    "on-click": "$HOME/scripts/waybarscreenrec.sh toggle fullscreen",
+    "on-click-right": "$HOME/scripts/waybarscreenrec.sh toggle region"
+}
 }
