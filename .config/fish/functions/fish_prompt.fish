@@ -11,11 +11,11 @@ function fish_prompt
     # - current background jobs, if any
 
     # It goes from:
-    # ╭─[nim@Hattori:~]─[11:39:00]
+    # ┬─[nim@Hattori:~]─[11:39:00]
     # ╰─>$ echo here
 
     # To:
-    # ╭─[nim@Hattori:~/w/dashboard]─[11:37:14]─[V:django20]─[G:master↑1|●1✚1…1]─[B:85%, 05:41:42 remaining]
+    # ┬─[nim@Hattori:~/w/dashboard]─[11:37:14]─[V:django20]─[G:master↑1|●1✚1…1]─[B:85%, 05:41:42 remaining]
     # │ 2    15054    0%    arrêtée    sleep 100000
     # │ 1    15048    0%    arrêtée    sleep 100000
     # ╰─>$ echo there
