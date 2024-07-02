@@ -452,3 +452,13 @@ window#waybar.empty #window {
   padding: 0px 10px 0px 10px;
   opacity: 0.8;
 }
+/* -----------------------------------------------------
+ * Custom-currency1
+ * ----------------------------------------------------- */
+#custom-currency1 {
+  background-color: @backgroundlight;
+  color: @textcolor2;
+  border-radius: 100px;
+  padding: 0px 10px 0px 10px;
+  opacity: 0.8;
+}

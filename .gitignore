@@ -118,3 +118,10 @@ install.log
 games
 virtual machines
 .tetris.scores
+.bun
+.config/app-outlet
+.config/bleachbit
+.config/qalculate
+.swt
+.nuxtrc
+a.out

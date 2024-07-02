@@ -113,3 +113,7 @@ source ~/.config/terminalrcs/aliases.sh
 source ~/.config/terminalrcs/binds.sh
 
 fish_add_path /home/gabriwar/.spicetify
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

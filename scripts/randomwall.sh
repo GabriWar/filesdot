@@ -1,5 +1,5 @@
 #!/bin/bash
-
+mkdir $HOME/.cache/wal 2>/dev/null
 cd ~/Pictures/wallpapers || exit
 #delete the cache if is more than half of the directory
 if [ $(wc -l <~/.cache/wal/wallpapers) -gt $(ls | wc -l) / 2 ]; then
