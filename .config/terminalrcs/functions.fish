@@ -9,8 +9,6 @@ function fzffiles
     if test -n "$selected_files"
         set -l files (echo $selected_files | tr '\n' ' ')
         commandline -r "$cmd $files"
-    else
-        echo "No files selected."
     end
 end
 
@@ -27,7 +25,5 @@ function fzfall
     set selected_file (fzf --prompt="Select file: " --preview "bat --color=always {}" --preview-window=right:60%)
     if test -n "$selected_file"
         commandline -r "$cmd $selected_file"
-    else
-        echo "No file selected."
     end
 end

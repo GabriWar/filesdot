@@ -104,6 +104,9 @@ function yy
     end
     rm -f -- "$tmp"
 end
+function fish_user_key_bindings
+    fish_vi_key_bindings
+end
 zoxide init fish | source
 pyenv init - | source
 set EDITOR nvim
