@@ -7,3 +7,4 @@
 #installing refind theme sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/bobafetthotmail/refind-theme-regular/master/install.sh)"
 #mkdir /.cache/wal
 #mkdir $HOME/Pictures/wallpapers
+#learn to use cht.sh and tldr
