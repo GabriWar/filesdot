@@ -1,7 +1,6 @@
 cat ~/.cache/wal/sequences &
 ## Set values
 function fish_greeting
-    cal -y
 end
 
 # Format man pages

@@ -19,10 +19,8 @@ function fish_prompt
     # │ 2    15054    0%    arrêtée    sleep 100000
     # │ 1    15048    0%    arrêtée    sleep 100000
     # ╰─>$ echo there
-
     set -l retc red
     test $status = 0; and set retc green
-
     set -q __fish_git_prompt_showupstream
     or set -g __fish_git_prompt_showupstream auto
 
