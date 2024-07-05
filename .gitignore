@@ -129,3 +129,6 @@ a.out
 Videos/Screencasts
 .config/Kitware
 .config/videomass
+.rustup
+.wine
+.wget-hsts
