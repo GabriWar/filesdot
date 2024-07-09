@@ -132,3 +132,14 @@ Videos/Screencasts
 .rustup
 .wine
 .wget-hsts
+.aspnet/DataProtection-Keys
+.binaryninja
+.config/Electron
+.config/Fiddler Everywhere
+.config/Notepadqq
+.config/Vector 35
+.config/imhex
+.config/ppsspp/PSP/SYSTEM
+.config/retroarch
+.config/rizin
+.fiddler

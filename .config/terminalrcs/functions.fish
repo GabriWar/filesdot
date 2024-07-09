@@ -1,3 +1,4 @@
+set --export FZF_DEFAULT_OPTS '--cycle --layout=reverse --border --height=90% --preview-window=wrap --marker="*"'
 function fzfjobs
     set selected_pid (jobs | fzf | awk '{print $2}')
     and fg %$selected_pid
@@ -5,7 +6,7 @@ end
 
 function fzffiles
     set cmd (commandline)
-    set selected_files (fd --type f -d 10 -H | fzf --multi --prompt="Select files: " --preview "bat --color=always {}")
+    set selected_files (fd --type f -d 100 -H | fzf --multi --prompt="Select files: " --preview "bat --color=always {}")
     if test -n "$selected_files"
         set -l files (echo $selected_files | tr '\n' ' ')
         commandline -r "$cmd $files"
