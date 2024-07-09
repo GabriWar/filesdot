@@ -1,24 +1,4 @@
 function fish_prompt
-    # This prompt shows:
-    # - green lines if the last return command is OK, red otherwise
-    # - your user name, in red if root or yellow otherwise
-    # - your hostname, in cyan if ssh or blue otherwise
-    # - the current path (with prompt_pwd)
-    # - date +%X
-    # - the current virtual environment, if any
-    # - the current git status, if any, with fish_git_prompt
-    # - the current battery state, if any, and if your power cable is unplugged, and if you have "acpi"
-    # - current background jobs, if any
-
-    # It goes from:
-    # ┬─[nim@Hattori:~]─[11:39:00]
-    # ╰─>$ echo here
-
-    # To:
-    # ┬─[nim@Hattori:~/w/dashboard]─[11:37:14]─[V:django20]─[G:master↑1|●1✚1…1]─[B:85%, 05:41:42 remaining]
-    # │ 2    15054    0%    arrêtée    sleep 100000
-    # │ 1    15048    0%    arrêtée    sleep 100000
-    # ╰─>$ echo there
     set -l retc red
     test $status = 0; and set retc green
     set -q __fish_git_prompt_showupstream

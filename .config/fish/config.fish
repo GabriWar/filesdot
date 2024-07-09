@@ -1,4 +1,3 @@
-cat ~/.cache/wal/sequences &
 ## Set values
 function fish_greeting
 end
@@ -107,15 +106,15 @@ end
 function fish_user_key_bindings
     fish_vi_key_bindings
 end
-zoxide init fish | source
-pyenv init - | source
-set EDITOR nvim
-source ~/.config/terminalrcs/functions.fish
-source ~/.config/terminalrcs/aliases.sh
-source ~/.config/terminalrcs/binds.sh
-
-fish_add_path /home/gabriwar/.spicetify
-
+zoxide init fish | source &
+pyenv init - | source &
+set -U EDITOR nvim
+source ~/.config/terminalrcs/functions.fish &
+source ~/.config/terminalrcs/aliases.sh &
+source ~/.config/terminalrcs/binds.sh &
+if test -e ~/.cache/wal/colors.fish
+    source ~/.cache/wal/colors.fish &
+end
 # bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
+set --export BUN_INSTALL "$HOME/.bun" &
+set --export PATH $BUN_INSTALL/bin $PATH &
