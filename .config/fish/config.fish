@@ -100,14 +100,14 @@ function yy
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
     yazi $argv --cwd-file="$tmp"
     if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-        cd -- "$cwd"
+        cd "$cwd"
     end
     rm -f -- "$tmp"
 end
 function fish_user_key_bindings
     fish_vi_key_bindings
 end
-zoxide init fish | source &
+zoxide init fish --cmd cd | source &
 pyenv init - | source &
 set -U EDITOR nvim
 source ~/.config/terminalrcs/functions.fish &
