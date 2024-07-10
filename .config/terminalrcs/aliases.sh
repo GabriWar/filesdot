@@ -46,7 +46,7 @@ alias paru="paru --color=always"
 alias v="nvim"
 alias paruedit="paru --fm nvim -Sy"
 alias yay="paru"
-alias pacmirrors="sudo reflector --verbose -c Brazil --latest 10 --sort rate --save /etc/pacman.d/mirrorlist  && pacman -Syu && pacman -Qe > ~/packages.txt",
+alias pacmirrors="reflector --verbose -c Brazil --latest 10 --sort rate --save /etc/pacman.d/mirrorlist  && pacman -Sy && pacman -Qe > ~/installed.txt",
 alias grubup="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias tarnow='tar -acf '
@@ -69,7 +69,6 @@ alias big="expac -H M '%m\t%n' | sort -h | nl"     # Sort installed packages acc
 alias gitpkg='pacman -Q | grep -i "\-git" | wc -l' # List amount of -git packages
 alias update='sudo pacman -Syu'
 alias chx='chmod +x *'
-alias cd='z'
 alias cdz='z $(fzf)'
 alias zf='fd --type f | fzf --preview "bat --color=always {}"'
 alias gpp='g++ -g -Wall -Wextra -gdwarf-4'

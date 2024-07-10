@@ -9,3 +9,5 @@
 	name = Gabriel Duarte Guerra
 [safe]
 	directory = /home/gabriwar
+[http]
+	postBuffer = 524288000

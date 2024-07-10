@@ -1,5 +1,6 @@
 ## Set values
 function fish_greeting
+    cal -3
 end
 
 # Format man pages

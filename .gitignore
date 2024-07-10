@@ -143,3 +143,5 @@ Videos/Screencasts
 .config/retroarch
 .config/rizin
 .fiddler
+.config/cachyos/cachyos-pi
+.config/qBittorrent

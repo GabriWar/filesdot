@@ -15,7 +15,7 @@ end
 
 function fzfgrep
     set cmd (commandline)
-    set file (fd -t f -d 10 -H | xargs grep -n -I . | fzf --ansi --preview "")
+    set file (fd -t f -d 10 -H | xargs grep -n -I . | fzf --ansi --preview "" | awk -F: '{print $1}')
     if test -n "$file"
         commandline -r "$cmd $file"
     end
