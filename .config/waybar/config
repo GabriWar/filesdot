@@ -5,8 +5,8 @@
     "group/group-hours",
     "hyprland/workspaces",
     "custom/screenrecorder",
-    "hyprland/window",
-    "group/group-icons",
+    "tray",
+    "group/opened",
     "custom/updates"
   ],
   "modules-center": [
@@ -148,7 +148,7 @@
     "tooltip": false,
     "on-click": "shutdown now"
   },
-  "group/group-icons": {
+  "group/opened": {
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 500,
@@ -157,9 +157,10 @@
     },
     "modules": [
       "wlr/taskbar",
-      "tray"
+      "hyprland/window"
     ]
   },
+
   "custom/updates": {
     "format": "{} ",
     "return-type": "json",
@@ -357,7 +358,7 @@
     ]
   },
   "hyprland/window": {
-    "format": "{title}"
+    "format": "{class} {title}"
   },
   "pulseaudio": {
     "format-source-muted": " ",

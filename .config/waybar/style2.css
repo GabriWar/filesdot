@@ -97,26 +97,25 @@ window#waybar.empty #window {
   font-style: normal;
   opacity: 0.8;
   color: @textcolor1;
+  padding: 0px 0px 0px 0px;
 }
 
 #taskbar button {
   border-radius: 100px;
   padding: 0px 5px 0px 5px;
+  transition: background 0.3s ease-in-out;
 }
 #taskbar button.active {
-  background: @backgrounddark;
-  color: @textcolor1;
-  border-radius: 100px;
-  transition: all 0.3s ease-in-out;
-}
-#taskbar button.minimized {
-  background: @textcolor1;
+  background-color: @backgrounddark;
   border-radius: 100px;
   padding: 0px 5px 0px 5px;
-  transition: all 0.3s ease-in-out;
+}
+#taskbar button.minimized {
+  border-radius: 100px;
+  padding: 0px 5px 0px 5px;
 }
 #taskbar.empty {
-  background-color: transparent;
+  background: rgba (0, 0, 0, 0);
   border: 0px;
   padding: 0px;
   font-size: 0px;
