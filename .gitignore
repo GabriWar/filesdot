@@ -149,3 +149,6 @@ Videos/Screencasts
 .local/lib/python3.10/site-packages/MarkupSafe-2.1.5.dist-info
 .local/lib/python3.10/site-packages
 .python_history
+.local
+obsidian
+.config/Ultralytics

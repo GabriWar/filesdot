@@ -303,11 +303,6 @@ window#waybar.empty #window {
     background-color: @backgrounddark;
   }
 }
-@keyframes none {
-  to {
-    background-color: rgba(0, 0, 0, 0);
-  }
-}
 #custom-updates {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -321,7 +316,6 @@ window#waybar.empty #window {
   animation-name: blink-update;
 }
 #custom-updates.empty {
-  animation-name: none;
   animation-iteration-count: 1;
   background-color: rgba(0, 0, 0, 0);
   color: rgba(0, 0, 0, 0);
