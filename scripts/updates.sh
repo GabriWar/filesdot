@@ -25,11 +25,11 @@ if [ "$1" = "-u" ]; then
 fi
 
 # Arch updates
-echo " Arch:" >>/tmp/pendingupdates
-archup=$(checkupdates)
-numarch=$(echo "$archup" | wc -l)
-echo "$numarch" >>/tmp/pendingupdates
-echo "$archup" >>/tmp/pendingupdates
+#echo " Arch:" >>/tmp/pendingupdates
+#archup=$(checkupdates)
+#numarch=$(echo "$archup" | wc -l)
+#echo "$numarch" >>/tmp/pendingupdates
+#echo "$archup" >>/tmp/pendingupdates
 
 #test if flatpak is installed ad save  the number of updates on flatpak
 # if [ -x "$(command -v flatpak)" ]; then
@@ -51,7 +51,7 @@ echo "$archup" >>/tmp/pendingupdates
 # fi
 #
 # AUR updates
-echo "AUR:" >>/tmp/pendingupdates
+echo "UPDATES:" >>/tmp/pendingupdates
 aurup=$(paru -Qu)
 numaur=$(echo "$aurup" | wc -l)
 echo "$numaur" >>/tmp/pendingupdates

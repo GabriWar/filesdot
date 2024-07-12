@@ -801,3 +801,13 @@ run = "plugin --sync arrow --args=-1"
 [[manager.prepend_keymap]]
 on = ["j"]
 run = "plugin --sync arrow --args=1"
+
+[[manager.prepend_keymap]]
+on = ["c", "m"]
+run = "plugin chmod"
+desc = "Chmod on selected files"
+
+[[manager.prepend_keymap]]
+on = "F"
+run = "plugin smart-filter"
+desc = "Smart filter"
