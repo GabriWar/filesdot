@@ -378,6 +378,16 @@ keymap = [
   ], run = "cd ~", desc = "Go to the home directory" },
   { on = [
     "g",
+    "m",
+  ], run = "cd /mnt/", desc = "Go to the /mnt/ directory" },
+  { on = [
+    "g",
+    "G",
+  ], run = "cd /", desc = "Go to / directory" },
+
+
+  { on = [
+    "g",
     "c",
   ], run = "cd ~/.config", desc = "Go to the config directory" },
   { on = [

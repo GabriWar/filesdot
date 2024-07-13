@@ -12,6 +12,7 @@ git clone https://github.com/giomatfois62/rofi-desktop.git
 sudo echo "HandleLidSwitchExternalPower=ignore" | sudo tee -a /etc/systemd/logind.conf
 sudo echo "HandleLidSwitch=ignore" | sudo tee -a /etc/systemd/logind.conf
 sudo echo "HandleLidSwitchDocked=ignore" | sudo tee -a /etc/systemd/logind.conf
+sudo echo "kernel.sysrq = 1" | sudo tee -a /etc/sysctl.d/99-sysctl.conf
 cd $USRHOME/.config/waybar/ || exit
 git clone https://github.com/gabriwar/waybar-mediaplayer
 cd waybar-mediaplayer || exit
