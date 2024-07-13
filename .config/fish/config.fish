@@ -113,6 +113,9 @@ set -U EDITOR nvim
 source ~/.config/terminalrcs/functions.fish &
 source ~/.config/terminalrcs/aliases.sh &
 source ~/.config/terminalrcs/binds.sh &
+if test -e ~/.cache/wal/colors.fish
+    source ~/.cache/wal/colors.fish &
+end
 # bun
 set --export BUN_INSTALL "$HOME/.bun" &
 set --export PATH $BUN_INSTALL/bin $PATH &
