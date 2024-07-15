@@ -18,6 +18,7 @@ if [ "$1" = "-u" ]; then
 		snap refresh
 	fi
 	killall -q waybar
+	nohup waybar &
 	echo "System updated"
 	echo "press enter to close"
 	read -r

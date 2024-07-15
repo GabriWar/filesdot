@@ -1,0 +1,9 @@
+
+[Desktop Entry]
+Name=IDA Pro 64-bit
+Comment=Interactive DisAssembler Pro
+Exec=wine /mnt/SSD1tb/LINUX-WIN/IDA-8.3-FULL/ida64.exe
+Icon=/mnt/SSD1tb/LINUX-WIN/IDA-8.3-FULL/ida.ico
+Terminal=true
+Type=Application
+Categories=Development;IDE;

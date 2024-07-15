@@ -153,3 +153,7 @@ Videos/Screencasts
 obsidian
 .config/Ultralytics
 .config/wireshark
+.autopsy/dev/var/log
+.config/micro/backups
+nohup.out
+testdisk.log
