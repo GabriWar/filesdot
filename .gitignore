@@ -157,3 +157,6 @@ obsidian
 .config/micro/backups
 nohup.out
 testdisk.log
+snap/autopsy
+.autopsy/dev
+scripts/deskto_entry/
