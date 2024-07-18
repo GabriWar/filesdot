@@ -160,3 +160,8 @@ testdisk.log
 snap/autopsy
 .autopsy/dev
 scripts/deskto_entry/
+.config/ppsspp/PSP
+.config/cpupower_gui/00-cpg.conf
+.sane/xsane
+scripts/deskto_entry
+hyprlog.txt
