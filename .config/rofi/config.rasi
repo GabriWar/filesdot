@@ -1,24 +1,24 @@
 configuration {
-/*	modes: "drun";*/
+/*	modes: [drun, combi";*/
 /*	font: "mono 12";*/
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
-	fixed-num-lines: true;
+	/*fixed-num-lines: true;*/
 	show-icons: true;
-/*	terminal: "rofi-sensible-terminal";*/
+	terminal: "kitty";
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
-/*	run-command: "{cmd}";*/
+run-command: "{cmd}";
 /*	run-list-command: "";*/
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
-/*	window-match-fields: "all";*/
+window-match-fields: "all";
 /*	icon-theme: ;*/
-/*	drun-match-fields: "name,generic,exec,categories,keywords";*/
+drun-match-fields: "all";
 /*	drun-categories: ;*/
-/*	drun-show-actions: false;*/
-/*	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";*/
+drun-show-actions: true;
+drun-display-format: "<span weight='bold'>{name}</span> [<span weight='light' size='large'><i>({generic})</i></span>]\n     {exec}\n     {categories}";
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
@@ -27,7 +27,7 @@ configuration {
 /*	case-sensitive: false;*/
 /*	cycle: true;*/
 /*	sidebar-mode: false;*/
-/*	hover-select: false;*/
+hover-select: true;
 /*	eh: 1;*/
 auto-select: true;
 /*	parse-hosts: false;*/
@@ -40,7 +40,7 @@ auto-select: true;
 /*	dpi: -1;*/
 /*	threads: 0;*/
 /*	scroll-method: 0;*/
-/*	window-format: "{w}    {c}   {t}";*/
+window-format: "{w} {c} {t}";
 /*	click-to-exit: true;*/
 /*	global-kb: false;*/
 /*	max-history-size: 25;*/
@@ -48,7 +48,7 @@ auto-select: true;
 /*	combi-display-format: "{mode} {text}";*/
 /*	matching-negate-char: '-' /* unsupported */;*/
 /*	cache-dir: ;*/
-/*	window-thumbnail: false;*/
+	window-thumbnail: true;
 /*	drun-use-desktop-cache: false;*/
 /*	drun-reload-desktop-cache: false;*/
 /*	normalize-match: false;*/
@@ -61,8 +61,7 @@ auto-select: true;
 /*	display-window: ;*/
 /*	display-run: ;*/
 /*	display-ssh: ;*/
-	display-drun: "";
-/*	display-combi: ;*/
+	display-combi:"" ;
 /*	display-keys: ;*/
 /*	display-filebrowser: ;*/
 /*	display-recursivebrowser: ;*/
@@ -108,7 +107,7 @@ auto-select: true;
 /*	kb-toggle-case-sensitivity: "grave,dead_grave";*/
 /*	kb-toggle-sort: "Alt+grave";*/
 /*	kb-cancel: "Escape,Control+g,Control+bracketleft";*/
-/*	kb-custom-1: "Alt+1";*/
+/*	kb-custom-1: "Alt+1rofi -show window -window-thumbnail";*/
 /*	kb-custom-2: "Alt+2";*/
 /*	kb-custom-3: "Alt+3";*/
 /*	kb-custom-4: "Alt+4";*/
@@ -158,32 +157,34 @@ auto-select: true;
 
 
 * {
-    font: "Figtree 13";
-    g-spacing: 10px;
+    font: "jetbrains mono 10";
+    g-spacing: 0px;
     g-margin: 0;
-    b-radius: 30px;
+    b-radius: 20px;
     g-padding: 8px;
-    w-border: 2px solid;
-    w-padding: 12px;
+    w-border: 9px solid;
+    w-padding: 0px;
 }
-element-icon { size:5ch ; }
+element-icon { size:8ch ; }
 configuration {
-    modi: "drun";
     show-icons: true;
-    display-drun: "";
+    display-drun: "  ";
+  display-window: "  ";
+  display-run: "  ";
+  display-ssh: "  ";
 }
 listview {
     columns: 1;
-    lines: 7;
-    cycle: false;
-    scrollbar: false;
+    lines: 17;
+    cycle: true;
+    scrollbar: true;
     border: 0px solid;
 }
 
 window {
     transparency: "real";
-    width: 950px;
-    height: 600px;
+    width: 1000px;
+    height: 750px;
     border-radius: @b-radius;
     border: @w-border;
     padding: @w-padding;
@@ -196,7 +197,7 @@ inputbar {
 }
 
 entry {
-    placeholder: "Search Apps";
+    placeholder: "";
 }
 
 mainbox {

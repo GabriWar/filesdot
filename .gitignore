@@ -165,3 +165,5 @@ scripts/deskto_entry/
 .sane/xsane
 scripts/deskto_entry
 hyprlog.txt
+.config/qalculate/qalculate-gtk.cfg
+.config/kdiff3fileitemactionrc
