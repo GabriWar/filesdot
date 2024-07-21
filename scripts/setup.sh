@@ -23,3 +23,6 @@ pyenv activate waybar
 pip3 install -r requirements.txt
 sudo systemctl enable nbfc
 sudo systemctl start nbfc
+if [ -f "$USRHOME/scripts/entries.sh" ]; then
+	sudo $USRHOME/scripts/entries.sh
+fi

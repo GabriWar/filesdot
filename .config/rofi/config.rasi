@@ -147,7 +147,7 @@ window-format: "{w} {c} {t}";
 /*	me-accept-custom: "Control+MouseDPrimary";*/
   timeout {
       action: "kb-cancel";
-      delay:  0;
+      delay:  10;
   }
   filebrowser {
       directories-first: true;
