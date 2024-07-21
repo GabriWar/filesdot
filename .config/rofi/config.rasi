@@ -172,6 +172,9 @@ configuration {
   display-window: "  ";
   display-run: "  ";
   display-ssh: "  ";
+  display-emoji: " Choose ";
+  display-combi: "  ";
+  dislay-dmenu: "";
 }
 listview {
     columns: 1;
