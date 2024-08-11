@@ -168,3 +168,12 @@ hyprlog.txt
 .config/qalculate/qalculate-gtk.cfg
 .config/kdiff3fileitemactionrc
 .config/cataclysm-dda
+.config/binwalk
+.config/seergdb
+.dotnet
+.ghidra/.ghidra_11.0.3_DEV
+.idapro
+.nuget/NuGet
+fiddler.rep
+idapro-9.0
+fiddler.gpr
