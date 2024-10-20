@@ -124,7 +124,7 @@ keymap = [
   { on = [
     "<Space>",
   ], run = [
-    "select --state=none",
+    "toggle --state=none",
     "arrow 1",
   ], desc = "Toggle the current selection state" },
   { on = [
@@ -135,10 +135,10 @@ keymap = [
   ], run = "visual_mode --unset", desc = "Enter visual mode (unset mode)" },
   { on = [
     "<C-a>",
-  ], run = "select_all --state=true", desc = "Select all files" },
+  ], run = "toggle_all --state=true", desc = "Select all files" },
   { on = [
     "<C-r>",
-  ], run = "select_all --state=none", desc = "Inverse selection of all files" },
+  ], run = "toggle_all --state=none", desc = "Inverse selection of all files" },
 
   # Operation
   { on = [
@@ -191,10 +191,10 @@ keymap = [
   ], run = "rename --cursor=before_ext", desc = "Rename a file or directory" },
   { on = [
     ";",
-  ], run = "shell", desc = "Run a shell command" },
+  ], run = "shell --interactive", desc = "Run a shell command" },
   { on = [
     ":",
-  ], run = "shell --block", desc = "Run a shell command (block the UI until the command finishes)" },
+  ], run = "shell --interactive --block", desc = "Run a shell command (block the UI until the command finishes)" },
   { on = [
     ".",
   ], run = "hidden toggle", desc = "Toggle the visibility of hidden files" },
@@ -781,7 +781,7 @@ keymap = [
 ]
 [[manager.prepend_keymap]]
 on = ["<C-s>"]
-run = 'shell "$SHELL" --block --confirm'
+run = 'shell "$SHELL"  --interactive'
 desc = "Open shell here"
 [[manager.prepend_keymap]]
 on = ["<C-o>"]
