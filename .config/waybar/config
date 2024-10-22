@@ -362,7 +362,7 @@
   },
   "pulseaudio": {
     "format-source-muted": " ",
-    "format": "{volume}% {format_source}{icon}",
+    "format": "{volume}% {format_source} {icon}",
     "format-bluetooth": "󰂰",
     "format-muted": "{format_source}",
     "format-icons": {
