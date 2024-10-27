@@ -17,7 +17,7 @@ window-match-fields: "all";
 /*	icon-theme: ;*/
 drun-match-fields: "all";
 /*	drun-categories: ;*/
-drun-show-actions: true;
+/*drun-show-actions: true; uncomment this line to show actions and keep it expanded*/
 drun-display-format: "<span weight='bold'>{name}</span> [<span weight='light' size='large'><i>({generic})</i></span>]\n     {exec}\n     {categories}";
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
