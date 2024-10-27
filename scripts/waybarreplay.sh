@@ -31,4 +31,4 @@ else
 	ONOFFSTRING="OFF"
 fi
 
-echo "{ \"text\": \"$ONOFF\", \"tooltip\":\"IS $ONOFFSTRING\n Press ctrl a to save replay \n press ctrl b to stop \"}"
+echo "{ \"text\": \"$ONOFF\", \"tooltip\":\"REPLAY IS $ONOFFSTRING\nMOD+F12 save replay \nMOD+F11 toggle\"}"
