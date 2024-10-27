@@ -4,7 +4,7 @@
   "modules-left": [
     "group/group-hours",
     "hyprland/workspaces",
-    "custom/screenrecorder",
+    "group/video",
     "tray",
     "group/opened",
     "custom/updates"
@@ -160,6 +160,19 @@
       "hyprland/window"
     ]
   },
+"group/video": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "tasks",
+      "transition-left-to-right": true
+    },
+    "modules": [
+      "custom/screenrecorder",
+      "custom/replay",
+    ]
+  },
+
 
   "custom/updates": {
     "format": "{} ",
@@ -405,6 +418,16 @@
     "exec": "~/scripts/currency.sh usd brl",
     "on-click": " $BROWSER https://br.investing.com/currencies/usd-brl"
   },
+"custom/replay": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": 3,
+    "exec": "~/scripts/waybarreplay.sh",
+    "on-click": "~/scripts/waybarreplay.sh toggle",
+    "on-click-right": "~/scripts/waybarreplay.sh save"
+  },
+
+
 "custom/screenrecorder": {
     "exec": "$HOME/scripts/waybarscreenrec.sh status",
     "interval": "once",

@@ -401,7 +401,8 @@ window#waybar.empty #window {
 #custom-lock,
 #custom-reboot,
 #custom-power,
-#custom-suspendhibernate {
+#custom-suspendhibernate,
+#custom-replay {
   background-color: @backgroundlight;
   color: @textcolor2;
   border-radius: 100px;
