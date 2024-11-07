@@ -23,6 +23,9 @@ pyenv activate waybar
 pip3 install -r requirements.txt
 sudo systemctl enable nbfc
 sudo systemctl start nbfc
+sudo touch /etc/modprobe.d/99-custom-no-logitech-driver.conf
+sudo echo "blacklist hid_logitech_dj" | sudo tee -a /etc/modprobe.d/99-custom-no-logitech-driver.conf
+sudo echo "blacklist hid_logitech_hidpp" | sudo tee -a /etc/modprobe.d/99-custom-no-logitech-driver.conf
 if [ -f "$USRHOME/scripts/entries.sh" ]; then
 	sudo $USRHOME/scripts/entries.sh
 fi

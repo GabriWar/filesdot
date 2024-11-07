@@ -191,3 +191,6 @@ Videos
 .config/vesktop
 Games/umu/umu-default
 venv
+.config/solaar/config.yaml
+.minecraft/astralsorcery_persistent
+.mputils
