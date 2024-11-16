@@ -194,3 +194,9 @@ venv
 .config/solaar/config.yaml
 .minecraft/astralsorcery_persistent
 .mputils
+.config/Insomnia
+.config/Fiddler
+.config/Portmaster
+.config/Proxyman
+.config/nekoray/config
+.config/zed
