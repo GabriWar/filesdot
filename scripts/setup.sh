@@ -29,3 +29,7 @@ sudo echo "blacklist hid_logitech_hidpp" | sudo tee -a /etc/modprobe.d/99-custom
 if [ -f "$USRHOME/scripts/entries.sh" ]; then
 	sudo $USRHOME/scripts/entries.sh
 fi
+hyprpm add https://github.com/virtcode/hypr-dynamic-cursors
+hyprpm add https://github.com/pyt0xic/hyprfocus
+hyprpm enable hyprfocus
+hyprpm enable dynamic-cursors
