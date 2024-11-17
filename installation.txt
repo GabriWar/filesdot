@@ -10,3 +10,9 @@ plymouth-set-default-theme -R chain
 #learn to use cht.sh and tldr
 # sudo chown -R $USER .
 paru -Sy pamac-all-git qemu virt-manager
+##fix some portal issues
+
+
+
+sudo mv /usr/share/xdg-desktop-portal/portals/gtk.portal /usr/share/xdg-desktop-portal/portals/gtk.portal.bak
+sudo cp /usr/share/xdg-desktop-portal/portals/hyprland.portal /usr/share/xdg-desktop-portal/portals/gtk.portal
