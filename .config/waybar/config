@@ -342,9 +342,9 @@
     }
   },
   "network": {
-    "format-wifi": "{ipaddr}",
-    "format-ethernet": "|{ipaddr}",
-    "format-disconnected": "{ipaddr}",
+    "format-wifi": " {ipaddr}",
+    "format-ethernet": " {ipaddr}",
+    "format-disconnected": " {ipaddr}",
     "tooltip-format": "{ipaddr}",
     "tooltip-format-wifi": "{essid}|{signalStrength}%||{ipaddr}",
     "tooltip-format-ethernet": "{ifname}|{mpstat -P ALL 1 1ipaddr}",
@@ -374,12 +374,12 @@
     "format": "{class} {title}"
   },
   "pulseaudio": {
-    "format-source-muted": " ",
-    "format": "{volume}% {format_source} {icon}",
+    "format-source-muted": "󰜺 ",
+    "format": "{icon} {volume}%  {format_source}",
     "format-bluetooth": "󰂰",
-    "format-muted": "{format_source}",
+    "format-muted": "{icon} 󰜺  {format_source}",
     "format-icons": {
-      "headphones": "",
+      "headphone": "",
       "bluetooth": "󰥰",
       "handsfree": "",
       "headset": "󱡬",
