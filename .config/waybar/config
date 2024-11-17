@@ -392,8 +392,8 @@
     },
     "justify": "center",
     "on-click-middle": "pavucontrol",
-    "on-click": "pactl set-source-mute 0 toggle",
-    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pactl set-source-mute 0 toggle",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
     "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
     "tooltip-format": "{icon}  {volume}% {desc} {format_source}"
