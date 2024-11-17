@@ -396,6 +396,8 @@
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
     "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "on-scroll-left": "pactl set-source-volume 0 -5%",
+    "on-scroll-right": "pactl set-source-volume 0 +5%",
     "tooltip-format": "{icon}  {volume}% {desc} {format_source}"
   },
   "tray": {
