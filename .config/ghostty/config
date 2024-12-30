@@ -4,7 +4,7 @@ adjust-underline-thickness = -60%
 cursor-style = bar
 
 shell-integration = fish
-shell-integration-features = no-cursor
+shell-integration-features = no-cursor,sudo
 
 keybind = ctrl+d=new_split:right
 
@@ -35,3 +35,5 @@ window-decoration = false
 
 font-size = 11
 font-family = JetBrainsMonoNL NFM SemiBold
+window-save-state = always
+window-colorspace = "display-p3"
