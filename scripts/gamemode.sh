@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
+echo $HYPRGAMEMODE
 if [ "$HYPRGAMEMODE" = 1 ]; then
 	hyprpm disable hyprfocus
 	sleep 1
