@@ -1,4 +1,3 @@
-
 adjust-underline-position = 40%
 adjust-underline-thickness = -60%
 
@@ -11,7 +10,7 @@ keybind = ctrl+d=new_split:right
 
 window-width = 120
 window-height = 45
-window-padding-x = 4
+window-padding-x = 0
 
 confirm-close-surface = false
 clipboard-paste-protection = false
@@ -19,11 +18,11 @@ unfocused-split-opacity = 1.0
 
 theme = iTerm2 Default
 foreground = #f4f4ff
-cursor-color = #ff00ff
+cursor-color = #2233ee
 background-opacity = 0.6
 
-selection-background = #344CFF
-selection-foreground = eeeeee
+selection-background = #4600b3
+selection-foreground = #eeeeee
 
 palette = 4=#3D52E2
 palette = 12=#344CFF
@@ -33,3 +32,6 @@ window-theme = ghostty
 clipboard-read = allow
 clipboard-paste-protection = false
 window-decoration = false
+
+font-size = 11
+font-family = JetBrainsMonoNL NFM SemiBold
