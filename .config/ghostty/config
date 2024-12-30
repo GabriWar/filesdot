@@ -1,0 +1,35 @@
+
+adjust-underline-position = 40%
+adjust-underline-thickness = -60%
+
+cursor-style = bar
+
+shell-integration = fish
+shell-integration-features = no-cursor
+
+keybind = ctrl+d=new_split:right
+
+window-width = 120
+window-height = 45
+window-padding-x = 4
+
+confirm-close-surface = false
+clipboard-paste-protection = false
+unfocused-split-opacity = 1.0
+
+theme = iTerm2 Default
+foreground = #f4f4ff
+cursor-color = #ff00ff
+background-opacity = 0.6
+
+selection-background = #344CFF
+selection-foreground = eeeeee
+
+palette = 4=#3D52E2
+palette = 12=#344CFF
+
+
+window-theme = ghostty
+clipboard-read = allow
+clipboard-paste-protection = false
+window-decoration = false
