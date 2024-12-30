@@ -179,7 +179,7 @@
     "return-type": "json",
     "interval": "5m",
     "exec": "~/scripts/updates.sh -j",
-    "on-click": "$TERMINAL sh ~/scripts/updates.sh -u"
+    "on-click": "$TERMINAL -e sh ~/scripts/updates.sh -u"
   },
   "custom/gpu-usage": {
     "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
@@ -192,9 +192,9 @@
     "return-type": "json",
     "interval": "1",
     "exec": "~/scripts/graphics.sh",
-    "on-click": "$TERMINAL sudo sh ~/scripts/graphics.sh -n",
-    "on-click-middle": "$TERMINAL sudo sh ~/scripts/graphics.sh -i",
-    "on-click-right": "$TERMINAL sudo sh ~/scripts/graph.sh -h"
+    "on-click": "$TERMINAL -e sudo sh ~/scripts/graphics.sh -n",
+    "on-click-middle": "$TERMINAL -e sudo sh ~/scripts/graphics.sh -i",
+    "on-click-right": "$TERMINAL -e sudo sh ~/scripts/graph.sh -h"
   },
   "custom/psu": {
     "format": "{}",
@@ -204,7 +204,7 @@
   "custom/pacman": {
     "format": "{icon}{}",
     "return-type": "json",
-    "on-click": "$TERMINAL sudo pacman -Syu && pacman -Qe > ~/installed.txt",
+    "on-click": "$TERMINAL -e sudo pacman -Syu && pacman -Qe > ~/installed.txt",
     "format-icons": {
       "pending-updates": "",
       "updated": ""
@@ -348,7 +348,7 @@
     "tooltip-format": "{ipaddr}",
     "tooltip-format-wifi": "{essid}|{signalStrength}%||{ipaddr}",
     "tooltip-format-ethernet": "{ifname}|{mpstat -P ALL 1 1ipaddr}",
-    "on-click": "$TERMINAL sudo wifi-menu"
+    "on-click": "$TERMINAL -e sudo wifi-menu"
   },
   "battery": {
     "interval": 1,
