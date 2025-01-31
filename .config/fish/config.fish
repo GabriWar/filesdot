@@ -116,6 +116,16 @@ source ~/.config/terminalrcs/binds.sh &
 if test -e ~/.cache/wal/colors.fish
     source ~/.cache/wal/colors.fish &
 end
+function spf
+    set -gx SPF_LAST_DIR "$HOME/.local/state/superfile/lastdir"
+
+    command spf $(pwd)
+
+    if test -f "$SPF_LAST_DIR"
+        source "$SPF_LAST_DIR"
+        rm -f -- "$SPF_LAST_DIR" >/dev/null
+    end
+end
 # bun
 set --export BUN_INSTALL "$HOME/.bun" &
 set --export PATH $BUN_INSTALL/bin $PATH &

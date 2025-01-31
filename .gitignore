@@ -200,3 +200,7 @@ venv
 .config/Proxyman
 .config/nekoray/config
 .config/zed
+.config/PCSX2
+.config/citron
+.config/dolphin-emu
+.vcpkg
