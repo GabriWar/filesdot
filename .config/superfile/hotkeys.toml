@@ -2,7 +2,7 @@
 # I know this is not really that "vim", but the control flow is different.
 # =================================================================================================
 # Global hotkeys (cannot conflict with other hotkeys)
-confirm = ['l', '']
+confirm = ['l', 'enter']
 quit = ['ctrl+c', ''] # also know as, theprimeagen troller
 # movement
 list_up = ['k', '']
