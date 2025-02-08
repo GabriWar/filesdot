@@ -204,3 +204,10 @@ venv
 .config/citron
 .config/dolphin-emu
 .vcpkg
+.BurpSuite
+.config/chromium/Crash Reports
+.proxmark3/history.txt
+extractions
+scripts/request.txt
+scripts/response_cache.txt
+.rnd
