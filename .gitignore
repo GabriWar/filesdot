@@ -211,3 +211,10 @@ extractions
 scripts/request.txt
 scripts/response_cache.txt
 .rnd
+.config/flutter
+.dart-tool
+.gradle
+.platformio
+.pub-cache
+ida-pro-9.0
+.flutter

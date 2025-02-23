@@ -1,3 +1,7 @@
+[ExtractDialog]
+1920x1080 screen: Window-Maximized=true
+DirHistory[$e]=$HOME/Downloads/IDAPRO9SP1/
+
 [General]
 LockSidebar=true
 ShowSidebar=true
