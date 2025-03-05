@@ -218,3 +218,8 @@ scripts/response_cache.txt
 .pub-cache
 ida-pro-9.0
 .flutter
+.config/kicad/9.0
+.gk
+.gitconfig
+photorec.se2
+photorec.ses
