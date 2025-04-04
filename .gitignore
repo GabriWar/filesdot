@@ -233,3 +233,5 @@ photorec.ses
 .android
 ida-pro-9.1
 .config/ludusavi
+.config/Code
+.vscode
