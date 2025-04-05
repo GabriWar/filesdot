@@ -1,5 +1,7 @@
-[plugin]
-deps = [{ use = "yazi-rs/plugins#chmod", commit = "bdad207" }, { use = "yazi-rs/plugins#smart-filter", commit = "bdad207" }]
+[[plugin.deps]]
+use = "Reledia/hexyl"
+rev = "228a9ef"
+hash = "cdc65cfe4e60e1bf5afe5769d074fa9c"
 
 [flavor]
 deps = []

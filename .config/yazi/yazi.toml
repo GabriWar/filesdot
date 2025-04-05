@@ -108,18 +108,6 @@ image_alloc = 536870912  # 512MB
 image_bound = [0, 0]
 suppress_preload = false
 
-[plugin]
-prepend_previewers = [
-  # Archive previewer
-  { mime = "application/*zip", run = "ouch" },
-  { mime = "application/x-tar", run = "ouch" },
-  { mime = "application/x-bzip2", run = "ouch" },
-  { mime = "application/x-7z-compressed", run = "ouch" },
-  { mime = "application/x-rar", run = "ouch" },
-  { mime = "application/x-xz", run = "ouch" },
-  # Markdown previewer
-  { name = "*.md", run = "glow" },
-]
 preloaders = [
   # Image
   { mime = "image/vnd.djvu", run = "noop" },
@@ -228,3 +216,5 @@ sort_reverse = false
 enabled = false
 
 [headsup]
+[pluign]
+append_previewers = [{name = "*" , run = "hexyl" },]

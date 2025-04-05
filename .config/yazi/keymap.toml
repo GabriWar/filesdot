@@ -803,4 +803,17 @@ desc = "Set as wallpaper"
 on = ["<C-x>"]
 run = 'shell --confirm "chmod +x $*"'
 desc = "make executable"
+[[manager.prepend_keymap]]
+on = ["u"]
+run = '''
+shell --confirm '
+  for file in "$@"; do
+    if [[ "$file" == *.zip ]]; then
+      folder="${file%.zip}"
+      mkdir -p "$folder" && unzip "$file" -d "$folder"
+    fi
+  done
+'
+'''
+desc = "Create a folder with the name of the file and unzip any zip file into it"
 
