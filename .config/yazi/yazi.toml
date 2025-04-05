@@ -118,6 +118,7 @@ preloaders = [
   { mime = "application/pdf", run = "pdf" },
 ]
 previewers = [
+  {name = "*" , run = "hexyl" },
   { name = "*/", run = "folder", sync = true },
   # Code
   { mime = "text/*", run = "code" },
@@ -216,5 +217,28 @@ sort_reverse = false
 enabled = false
 
 [headsup]
+
 [pluign]
-append_previewers = [{name = "*" , run = "hexyl" },]
+append_previewers = [
+{ name = "*" , run = "hexyl" },
+{ mime = "audio/*",   run = "exifaudio"},
+]
+
+[plugin]
+prepend_previewers = [
+{ name = "*.md", run = "glow" },
+{ name = "*.csv", run = "duckdb" },  
+{ name = "*.tsv", run = "duckdb" },  
+{ name = "*.json", run = "duckdb" },  
+{ name = "*.parquet", run = "duckdb" },  
+    ]
+
+prepend_preloaders = [  
+      { name = "*.csv", run = "duckdb", multi = false },  
+      { name = "*.tsv", run = "duckdb", multi = false },  
+      { name = "*.json", run = "duckdb", multi = false },  
+      { name = "*.parquet", run = "duckdb", multi = false },
+      { name = "*.db", run = "duckdb" },
+      { name = "*.duckdb", run = "duckdb" },
+    ]
+
