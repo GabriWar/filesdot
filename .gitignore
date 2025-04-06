@@ -237,3 +237,5 @@ ida-pro-9.1
 .vscode
 .config/Code - Insiders
 .vscode-insiders
+.syncedlyrics/musixmatch_token.json
+scripts/.syncedlyrics/musixmatch_token.json
