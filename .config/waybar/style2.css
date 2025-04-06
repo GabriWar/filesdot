@@ -21,7 +21,7 @@ window#waybar {
   border-radius: 100px;
   border: 0px;
   font-style: normal;
-  opacity: 0.8;
+  opacity: 0.9;
   color: @textcolor1;
 }
 
@@ -56,7 +56,7 @@ window#waybar {
 tooltip {
   border-radius: 10px;
   background-color: @backgrounddark;
-  opacity: 0.8;
+  opacity: 1;
   padding: 20px;
 }
 
@@ -74,7 +74,7 @@ tooltip label {
   border-radius: 100px;
   color: @textcolor2;
   font-weight: normal;
-  opacity: 0.8;
+  opacity: 0.9;
   transition: all 0s linear;
 }
 
@@ -95,7 +95,7 @@ window#waybar.empty #window {
   border-radius: 100px;
   font-weight: normal;
   font-style: normal;
-  opacity: 0.8;
+  opacity: 0.9;
   color: @textcolor1;
   padding: 0px 0px 0px 0px;
 }
@@ -140,7 +140,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 #idle_inhibitor.activated {
@@ -156,7 +156,7 @@ window#waybar.empty #window {
   background-color: @backgrounddark;
   color: @textcolor1;
   border-radius: 100px;
-  opacity: 0.8;
+  opacity: 0.9;
   padding: 0px 5px 0px 5px;
 }
 
@@ -169,7 +169,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 #pulseaudio.muted {
@@ -190,7 +190,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 #network.ethernet {
@@ -214,7 +214,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 #bluetooth.off {
@@ -231,7 +231,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 15px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 #battery.charging,
@@ -292,7 +292,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 /* -----------------------------------------------------
  * updates pacman
@@ -311,7 +311,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   padding: 0px 8px 0px 8px;
   border-radius: 100px;
-  opacity: 0.8;
+  opacity: 0.9;
   animation-duration: 3s;
   animation-name: blink-update;
 }
@@ -332,7 +332,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 /* -----------------------------------------------------
  * Memory
@@ -342,7 +342,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 /* -----------------------------------------------------
  * CPU
@@ -352,7 +352,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 /* -----------------------------------------------------
  *spotfy 
@@ -362,7 +362,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 /* -----------------------------------------------------
  * Temp
@@ -372,7 +372,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 /* -----------------------------------------------------
  * User/uptime
@@ -382,7 +382,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 /* -----------------------------------------------------
  * Privacy
@@ -392,7 +392,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 /* -----------------------------------------------------
  *power custom 
@@ -407,7 +407,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .not-power {
   background-color: @backgrounddark;
@@ -424,7 +424,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 /* -----------------------------------------------------
  * Custom notification
@@ -434,7 +434,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 /* -----------------------------------------------------
  * Custm-mediaplayer is setted on $home/.config/waybar/waybar-media-player/src
@@ -444,7 +444,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 /* -----------------------------------------------------
  * Custom-currency1
@@ -454,7 +454,7 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 /* -----------------------------------------------------
  * Custom-screenrecorder
@@ -464,5 +464,12 @@ window#waybar.empty #window {
   color: @textcolor2;
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
-  opacity: 0.8;
+  opacity: 0.9;
+}
+#custom-weather {
+  background-color: @backgroundlight;
+  color: @textcolor2;
+  border-radius: 100px;
+  padding: 0px 10px 0px 10px;
+  opacity: 0.9;
 }

@@ -10,7 +10,8 @@
     "custom/updates"
   ],
   "modules-center": [
-    "custom/currency1"
+    //"custom/currency1",
+    "custom/weather"
   ],
   "modules-right": [
     "privacy",
@@ -439,5 +440,12 @@
     "format": "{}",
     "on-click": "$HOME/scripts/waybarscreenrec.sh toggle fullscreen",
     "on-click-right": "$HOME/scripts/waybarscreenrec.sh toggle region"
-}
-}
+},
+
+"custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar",
+    "return-type": "json"
+  }}
