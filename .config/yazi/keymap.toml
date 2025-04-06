@@ -808,11 +808,16 @@ on = ["u"]
 run = '''
 shell --confirm '
   for file in "$@"; do
-    if [[ "$file" == *.zip ]]; then
-      folder="${file%.zip}"
-      mkdir -p "$folder" && unzip "$file" -d "$folder"
-    fi
+    # Extract filename without extension
+    filename=$(basename -- "$file")
+    folder="${filename%.*}"
+    
+    # Create folder with the name of the file
+    mkdir -p "$folder"
+    
+    # Use 7z to extract the archive into the folder
+    7z x "$file" -o"$folder"
   done
 '
 '''
-desc = "Create a folder with the name of the file and unzip any zip file into it"
+desc = "Create a folder with the name of the file and extract any archive using 7zip"
