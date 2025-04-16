@@ -241,3 +241,5 @@ ida-pro-9.1
 scripts/.syncedlyrics/musixmatch_token.json
 .config/Transformice
 .renderdoc
+.config/frida
+.jeb-android-frameworks
