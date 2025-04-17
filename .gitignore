@@ -243,3 +243,4 @@ scripts/.syncedlyrics/musixmatch_token.json
 .renderdoc
 .config/frida
 .jeb-android-frameworks
+.gdb_history
