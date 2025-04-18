@@ -7,6 +7,12 @@ shell-integration = fish
 shell-integration-features = no-cursor,sudo
 
 keybind = ctrl+d=new_split:right
+keybind = ctrl+i=increase_font_size:2
+keybind = ctrl+o=decrease_font_size:2
+keybind = ctrl+j=scroll_page_up
+keybind = ctrl+k=scroll_page_down
+keybind = ctrl+b=write_scrollback_file:paste
+keybind = ctrl+n=write_screen_file:paste
 
 window-width = 120
 window-height = 45
@@ -19,7 +25,7 @@ unfocused-split-opacity = 1.0
 theme = iTerm2 Default
 foreground = #f4f4ff
 cursor-color = #2233ee
-background-opacity = 0.6
+background-opacity = 0.3
 
 selection-background = #4600b3
 selection-foreground = #eeeeee
