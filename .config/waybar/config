@@ -426,8 +426,7 @@
     "return-type": "json",
     "interval": 3,
     "exec": "~/scripts/waybarreplay.sh",
-    "on-click": "~/scripts/waybarreplay.sh toggle",
-    "on-click-right": "~/scripts/waybarreplay.sh save"
+    "on-click": "~/scripts/waybarreplay.sh toggle"
   },
 
 

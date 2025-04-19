@@ -245,3 +245,6 @@ scripts/.syncedlyrics/musixmatch_token.json
 .jeb-android-frameworks
 .gdb_history
 Documents
+.config/Minecraft Linux Launcher
+.config/PINCE
+.duckdb/extensions/v1.2.1/linux_amd64_gcc4
