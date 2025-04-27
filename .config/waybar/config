@@ -186,7 +186,7 @@
     },
     "modules": [
       "custom/screenrecorder",
-      "custom/replay",
+      "custom/replay"
     ]
   },
 
@@ -358,15 +358,23 @@
       "on-click-right": "mode"
     }
   },
-  "network": {
-    "format-wifi": " {ipaddr}",
-    "format-ethernet": " {ipaddr}",
-    "format-disconnected": " {ipaddr}",
-    "tooltip-format": "{ipaddr}",
-    "tooltip-format-wifi": "{essid}|{signalStrength}%||{ipaddr}",
-    "tooltip-format-ethernet": "{ifname}|{mpstat -P ALL 1 1ipaddr}",
-    "on-click": "$TERMINAL -e sudo wifi-menu"
-  },
+"network": {
+  "format": "󰖟 {ifname}",
+  "format-wifi": " {essid} ({signalStrength}%) | {bandwidthUpBytes}↑ {bandwidthDownBytes}↓",
+  "format-ethernet": "󰈀 {ipaddr}/{cidr} | {bandwidthUpBytes}↑ {bandwidthDownBytes}↓",
+  "format-linked": " {ifname} (No IP)",
+  "format-disconnected": "󰖪",
+  "format-alt": "󰖟 {ipaddr} | GW: {gwaddr} | NM: {netmask}",
+  "tooltip": true,
+  "tooltip-format": "Interface: {ifname}\nIP: {ipaddr}\nGateway: {gwaddr}\nNetmask: {netmask}\nCIDR: {cidr}\nTotal: {bandwidthTotalBytes}/s",
+  "tooltip-format-wifi": "SSID: {essid} ({signalStrength}%)\nFrequency: {frequency}GHz\nSignal: {signaldBm}dBm\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}\nUp: {bandwidthUpBits}b/s\nDown: {bandwidthDownBits}b/s\nTotal: {bandwidthTotalBits}b/s",
+  "tooltip-format-ethernet": "Interface: {ifname}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}\nNetmask: {netmask}\nUp: {bandwidthUpBytes}/s\nDown: {bandwidthDownBytes}/s\nTotal: {bandwidthTotalBytes}/s",
+  "tooltip-format-disconnected": "Disconnected",
+  "interval": 2,
+  "on-click": "$TERMINAL -e sudo wifi-menu",
+  "on-click-right": "nm-connection-editor",
+  "on-click-middle": "$TERMINAL -e nmtui"
+},
   "battery": {
     "interval": 1,
     "states": {
