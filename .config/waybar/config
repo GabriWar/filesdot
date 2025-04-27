@@ -19,8 +19,8 @@
     "custom/mediaplayer",
     "pulseaudio",
     "network",
-    "cpu",
-    "temperature",
+    "custom/cpugpu",
+    "custom/cpugpu2",
     "memory",
     "custom/notification",
     "group/group-power"
@@ -78,6 +78,22 @@
     "format-critical": "{temperatureC}°C ",
     "format": "{temperatureC}°C"
   },
+"custom/cpugpu": {
+    "format": "󱄄 {}",
+    "return-type": "json",
+    "interval": "1s",
+    "exec": "~/scripts/cpugpu.sh -gl",
+    "on-click": "nvtop"
+  },
+"custom/cpugpu2": {
+    "format": " {}",
+    "return-type": "json",
+    "interval": "1s",
+    "exec": "~/scripts/cpugpu.sh -cl",
+    "on-click": "btop"
+  },
+
+
   "cpu": {
     "interval": 10,
     "format": " {load}"
@@ -200,7 +216,7 @@
   "custom/psu": {
     "format": "{}",
     "exec": "psuinfo",
-    "restart-interval": 0
+    "restart-interuval": 0
   },
   "custom/pacman": {
     "format": "{icon}{}",

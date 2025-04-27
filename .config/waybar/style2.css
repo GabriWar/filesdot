@@ -473,3 +473,55 @@ window#waybar.empty #window {
   padding: 0px 10px 0px 10px;
   opacity: 0.9;
 }
+#custom-cpugpu {
+  background-color: @backgroundlight;
+  color: @textcolor2;
+  border-radius: 100px;
+  padding: 0px 10px 0px 10px;
+  opacity: 0.9;
+}
+#custom-cpugpu2 {
+  background-color: @backgroundlight;
+  color: @textcolor2;
+  border-radius: 100px;
+  padding: 0px 10px 0px 10px;
+  opacity: 0.9;
+}
+#custom-cpugpu2.hot {
+  background-color: #f53c3c;
+  color: @textcolor3;
+  animation-name: blink;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#custom-cpugpu.hot {
+  background-color: #f53c3c;
+  color: @textcolor3;
+  animation-name: blink;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#custom-cpugpu.usage {
+  background-color: #ffff00;
+  color: @textcolor3;
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#custom-cpugpu2.usage {
+  background-color: #ffff00;
+  color: @textcolor3;
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
