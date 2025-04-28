@@ -83,24 +83,31 @@
     "return-type": "json",
     "interval": "1s",
     "exec": "~/scripts/cpugpu.sh -gl",
-    "on-click": "nvtop"
-  },
+    "min-length": 12,
+    "max-length": 12,
+    "on-click": "$TERMINAL -e nvtop"
+},
+
 "custom/cpugpu2": {
     "format": " {}",
     "return-type": "json",
     "interval": "1s",
     "exec": "~/scripts/cpugpu.sh -cl",
-    "on-click": "btop"
-  },
+    "min-length": 12,
+    "max-length": 12,
+    "on-click": "$TERMINAL -e btop"
+},
 
 
   "cpu": {
     "interval": 10,
-    "format": " {load}"
+    "format": "󰍛{load:>4}",
+    "min-length": 10,
+    "max-length": 10
   },
   "memory": {
     "interval": 10,
-    "format": " {used:0.1f}/{total:0.1f}"
+    "format": " {used:>4.1f}/{total:<4.1f}"
   },
   "group/group-power": {
     "orientation": "inherit",
@@ -359,10 +366,10 @@
     }
   },
 "network": {
-  "format": "󰖟 {ifname}",
-  "format-wifi": " {essid} ({signalStrength}%) | {bandwidthUpBytes}↑ {bandwidthDownBytes}↓",
-  "format-ethernet": "󰈀 {ipaddr}/{cidr} | {bandwidthUpBytes}↑ {bandwidthDownBytes}↓",
-  "format-linked": " {ifname} (No IP)",
+  "format": "󰖟{ifname}",
+  "format-wifi": "{essid:<10}({signalStrength:>2}%)|{bandwidthUpBytes:>3} ↑{bandwidthDownBytes:>3}↓",
+  "format-ethernet": "󰈀 {ipaddr}/{cidr:<8}|{bandwidthUpBytes:>6}↑{bandwidthDownBytes:>6}↓",
+  "format-linked": " {ifname:<10} (No IP)",
   "format-disconnected": "󰖪",
   "format-alt": "󰖟 {ipaddr} | GW: {gwaddr} | NM: {netmask}",
   "tooltip": true,
@@ -371,6 +378,8 @@
   "tooltip-format-ethernet": "Interface: {ifname}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}\nNetmask: {netmask}\nUp: {bandwidthUpBytes}/s\nDown: {bandwidthDownBytes}/s\nTotal: {bandwidthTotalBytes}/s",
   "tooltip-format-disconnected": "Disconnected",
   "interval": 2,
+  "min-length": 38,
+  "max-length": 38,
   "on-click": "$TERMINAL -e sudo wifi-menu",
   "on-click-right": "nm-connection-editor",
   "on-click-middle": "$TERMINAL -e nmtui"
