@@ -37,7 +37,7 @@ window#waybar {
   color: @textcolor1;
   background: @workspacesbackground2;
   border-radius: 100px;
-  min-width: 40px;
+  min-width: 25px;
   transition: all 0.3s ease-in-out;
   opacity: 1;
 }
@@ -47,6 +47,58 @@ window#waybar {
   background: @workspacesbackground2;
   border-radius: 100px;
   opacity: 0.7;
+}
+
+/* ----------------------------------------------------- 
+ * Hyprland Workspaces - Updated Styling
+ * ----------------------------------------------------- */
+
+/* Hide empty workspaces */
+#workspaces button.empty {
+  opacity: 0;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* Urgent workspaces in yellow */
+#workspaces button.urgent {
+  color: #000000;
+  background: #f6d32d;
+  border-radius: 100px;
+  min-width: 25px;
+  opacity: 1;
+}
+
+/* Hosting workspace in purple */
+#workspaces button.hosting-monitor {
+  color: @textcolor1;
+  background: @color12;
+  border-radius: 100px;
+  min-width: 25px;
+  opacity: 0.9;
+}
+
+/* Make sure styles are applied in the right order (last has priority) */
+#workspaces button.persistent.empty {
+  opacity: 0.3;
+  min-width: 25px;
+}
+
+#workspaces button.special.active {
+  background: #1c71d8;
+  opacity: 1;
+}
+
+#workspaces button.urgent.active {
+  background: #e5a50a;
+  opacity: 1;
+}
+
+#workspaces button.hosting-monitor.active {
+  background: @color14;
+  opacity: 1;
 }
 
 /* -----------------------------------------------------

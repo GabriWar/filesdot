@@ -33,16 +33,12 @@
       "2": "2",
       "3": "3",
       "4": "4",
-      "5": "5"
-    },
-    "persistent-workspaces": {
-      "*": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10"
     }
   },
   "user": {
@@ -89,7 +85,7 @@
 },
 
 "custom/cpugpu2": {
-    "format": " {}",
+    "format": "󰍛 {}",
     "return-type": "json",
     "interval": "1s",
     "exec": "~/scripts/cpugpu.sh -cl",
@@ -101,13 +97,13 @@
 
   "cpu": {
     "interval": 10,
-    "format": "󰍛{load:>4}",
+    "format": "{load:>4}",
     "min-length": 10,
     "max-length": 10
   },
   "memory": {
     "interval": 10,
-    "format": " {used:>4.1f}/{total:<4.1f}"
+    "format": "{used:>4.1f}/{total:<4.1f}"
   },
   "group/group-power": {
     "orientation": "inherit",
