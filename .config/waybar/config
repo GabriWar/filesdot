@@ -7,7 +7,8 @@
     "group/video",
     "tray",
     "group/opened",
-    "custom/updates"
+    "custom/updates",
+    "custom/networking"
   ],
   "modules-center": [
     //"custom/currency1",
@@ -94,6 +95,14 @@
     "on-click": "$TERMINAL -e btop"
 },
 
+
+"custom/networking": {
+    "format": " {}",
+    "return-type": "json",
+    "interval": "5s",
+    "exec": "~/scripts/netmon.sh",
+    "on-click": "terminal -e etherape"
+},
 
   "cpu": {
     "interval": 10,

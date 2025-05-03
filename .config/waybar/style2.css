@@ -577,3 +577,10 @@ window#waybar.empty #window {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+#custom-networking {
+  background-color: @backgroundlight;
+  color: @textcolor2;
+  border-radius: 100px;
+  padding: 0px 10px 0px 10px;
+  opacity: 0.9;
+}
