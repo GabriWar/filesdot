@@ -1,0 +1,31 @@
+[Diagram]
+name_res=true
+diagram_only=false
+group_unk=true
+headless=false
+centered_nodes=
+text_color=#ffff00
+fontname=Sans 8
+colors=#ff0000;WWW,HTTP,HTTPS #0000ff;DOMAIN #00ff00 #ffff00 #ff00ff #00ffff;ICMP,ICMPV6 #ffffff #ff7700 #ff0077 #ffaa77 #7777ff #aaaa33
+bck_image_enabled=true
+bck_image_path=
+show_statusbar=false
+show_toolbar=false
+show_legend=false
+inner_ring_scale=0.5
+node_radius_multiplier=0.00050000000000000001
+node_size_variable=2
+size_mode=0
+gui_node_timeout_time=60000
+proto_node_timeout_time=120000
+gui_link_timeout_time=3000
+proto_link_timeout_time=200000
+proto_timeout_time=600000
+refresh_period=100
+averaging_time=2000
+filter=ip or ip6
+pcap_stats_pos=0
+stack_level=0
+
+[General]
+version=0.9.20
