@@ -65,7 +65,6 @@ alias q='exit'                                                                  
 alias lssizes='du -h | sort -h'                                                                                                                         # list files/dirs by size
 alias lssize='du -achd1 | sort -h'                                                                                                                      # list first-level dirs by size
 alias ports='ss -tulanp'                                                                                                                                # show all open ports
-alias myps='ps -ef | grep $USER'                                                                                                                        # show your processes
 alias cpu='cat /proc/cpuinfo | grep "model name" | head -1'                                                                                             # show CPU info
 alias diskspace='df -h | grep -v tmp'                                                                                                                   # show disk space usage
 alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'                                          # run internet speed test
