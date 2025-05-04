@@ -30,8 +30,7 @@ alias myip="curl http://ipecho.net/plain; echo"                                 
 alias folders='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'                                                                         # list folders by size
 alias grep='grep --color=auto'                                                                                                                          # colorize grep output
 alias cope="gh copilot"                                                                                                                                 # shortcut for GitHub Copilot
-alias wallp="sh ~/.config/hypr/scripts/randomwall.sh &"                                                                                                 # set random wallpaper
-alias ch= "cliphist list | fzf | cliphist decode | wl-copy"                                                                                             # fuzzy search clipboard history
+alias ch="cliphist list | fzf | cliphist decode | wl-copy"                                                                                              # fuzzy search clipboard history
 alias paru="paru --color=always"                                                                                                                        # colorized paru output
 alias v="nvim"                                                                                                                                          # shortcut for neovim
 alias paruedit="paru --fm nvim -Sy"                                                                                                                     # update and edit with neovim
