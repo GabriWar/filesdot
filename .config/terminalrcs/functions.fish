@@ -69,3 +69,10 @@ function fzfnvim
         end
     end
 end
+
+function 7zx
+    set filename (basename $argv[1])
+    set dirname (string replace -r '\.[^.]*$' '' $filename)
+    mkdir -p $dirname
+    7z x $argv[1] -o$dirname
+end

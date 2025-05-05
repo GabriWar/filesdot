@@ -24,6 +24,7 @@ unfocused-split-opacity = 1.0
 
 theme = iTerm2 Default
 foreground = #f4f4ff
+background = #151314
 cursor-color = #2233ee
 background-opacity = 0.3
 

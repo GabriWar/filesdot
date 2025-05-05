@@ -100,8 +100,8 @@
     "format": " {}",
     "return-type": "json",
     "interval": "5s",
-    "exec": "~/scripts/netmon.sh",
-    "on-click": "terminal -e etherape"
+    "exec": "python3 ~/scripts/netmon/notifier.py > /dev/null 2>&1 & sudo ~/scripts/netmon.sh",
+    "on-click": "sh ~/scripts/netnotifytoggle.sh"
 },
 
   "cpu": {

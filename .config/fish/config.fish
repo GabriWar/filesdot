@@ -46,7 +46,6 @@ if test -d ~/Applications/depot_tools
     end
 end
 
-
 ## Functions
 # Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
 function __history_previous_command

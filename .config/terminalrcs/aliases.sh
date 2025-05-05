@@ -80,3 +80,4 @@ alias back='cd "$OLDPWD"'                                                       
 alias cpv='rsync -ah --info=progress2'                                                                                                                  # copy with progress bar
 alias webserver='python -m http.server 8000'                                                                                                            # start a simple web server
 alias watch='watch -n1 -d'                                                                                                                              # watch with 1s updates and highlighting
+alias extbin='binwalk -veMa'                                                                                                                            #extract.bin files

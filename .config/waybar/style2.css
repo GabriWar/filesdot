@@ -109,7 +109,7 @@ tooltip {
   border-radius: 10px;
   background-color: @backgrounddark;
   opacity: 1;
-  padding: 20px;
+  padding: 0px;
 }
 
 tooltip label {
