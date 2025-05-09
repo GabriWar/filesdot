@@ -4,9 +4,10 @@ function fish_right_prompt
     set -g __fish_git_prompt_showupstream informative
     set -g __fish_git_prompt_showcolorhints 1
     set -g __fish_git_prompt_use_informative_chars 1
+    set -l _display_status $status
     # Unfortunately this only works if we have a sensible locale
     string match -qi "*.utf-8" -- $LANG $LC_CTYPE $LC_ALL
-    and set -g __fish_git_prompt_char_dirtystate "✚"
+    and set -g __fish_git_prompt_char_dirtystate +
     set -g __fish_git_prompt_char_untrackedfiles "?"
 
     # The git prompt's default format is ' (%s)'.
@@ -26,7 +27,6 @@ function fish_right_prompt
     or set -g VIRTUAL_ENV_DISABLE_PROMPT true
     set -q VIRTUAL_ENV
     and set -l venv (string replace -r '.*/' '' -- "$VIRTUAL_ENV")
-
     set_color normal
-    string join " " -- $venv $duration $vcs $d
+    string join " " -- $venv $duration '('$_display_status')' $vcs $d
 end

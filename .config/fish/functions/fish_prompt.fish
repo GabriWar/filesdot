@@ -1,5 +1,6 @@
 function fish_prompt
     set -l retc red
+    set -l _display_status $status
     test $status = 0; and set retc green
     set -q __fish_git_prompt_showupstream
     or set -g __fish_git_prompt_showupstream auto
@@ -43,6 +44,9 @@ function fish_prompt
     else
         set_color -o cyan
     end
+    #disable pwd shortening
+    set -q fish_prompt_pwd_dir_length
+    or set -lx fish_prompt_pwd_dir_length 0
 
     echo -n (prompt_hostname)
     set_color -o white
@@ -78,13 +82,11 @@ function fish_prompt
         _nim_prompt_wrapper $retc '' $mode
     end
 
-
     # Virtual Environment
     set -q VIRTUAL_ENV_DISABLE_PROMPT
     or set -g VIRTUAL_ENV_DISABLE_PROMPT true
     set -q VIRTUAL_ENV
     and _nim_prompt_wrapper $retc V (basename "$VIRTUAL_ENV")
-
 
     # Battery status
     type -q acpi

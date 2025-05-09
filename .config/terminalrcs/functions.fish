@@ -21,7 +21,7 @@ end
 function fzfgrep
     set cmd (commandline)
     set match (
-        rg --line-number --no-heading --color=always . 2>/dev/null \
+        rg --line-number --no-heading --color=always . -d 100 2>/dev/null \
         | fzf --ansi --prompt="Grep file: " \
               --delimiter=: \
               --preview='bat --style=numbers --color=always {1} --highlight-line {2}' \
@@ -54,7 +54,7 @@ end
 
 function fzfnvim
     set match (
-        rg --line-number --no-heading --color=always . 2>/dev/null \
+        rg --line-number --no-heading --color=always . -d 100 2>/dev/null \
         | fzf --ansi --prompt="Grep & open in Neovim: " \
               --delimiter=: \
               --preview='bat --style=numbers --color=always {1} --highlight-line {2}' \
