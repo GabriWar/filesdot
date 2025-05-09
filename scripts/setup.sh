@@ -35,5 +35,4 @@ hyprpm enable hyprfocus
 hyprpm enable dynamic-cursors
 gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
 gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
-gsettings set org.gnome.desktop.interface icon-theme "Papyrus-Dark"
 gsettings set org.gnome.desktop.interface color-scheme "prefer-dark" # for GTK4 apps
