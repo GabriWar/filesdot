@@ -1,7 +1,6 @@
-test ! -e "$HOME/.x-cmd.root/local/data/fish/rc.fish" || source "$HOME/.x-cmd.root/local/data/fish/rc.fish" # boot up x-cmd.
 ## Set values
 function fish_greeting
-    cal -3
+    fastfetch
 end
 
 # Format man pages

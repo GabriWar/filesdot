@@ -1,6 +1,20 @@
 [Default Applications]
-text/html=thorium-browser.desktop
-x-scheme-handler/http=thorium-browser.desktop
-x-scheme-handler/https=thorium-browser.desktop
-x-scheme-handler/about=thorium-browser.desktop
-x-scheme-handler/unknown=thorium-browser.desktop
+x-scheme-handler/mailto=thorium-browser.desktop
+x-scheme-handler/hydralauncher=hydralauncher.desktop
+x-scheme-handler/ror2mm=r2modman.desktop
+x-scheme-handler/discord-455712169795780630=discord-455712169795780630.desktop
+x-scheme-handler/discord=vesktop.desktop
+x-scheme-handler/gitkraken=GitKraken.desktop
+ror2mm=gale-handler.desktop
+image/png=qimgv.desktop
+image/jpeg=qimgv.desktop
+image/jpg=qimgv.desktop
+image/gif=qimgv.desktop
+image/webp=qimgv.desktop
+
+[Added Associations]
+text/html=thorium-browser.desktop;
+x-scheme-handler/http=thorium-browser.desktop;
+x-scheme-handler/https=thorium-browser.desktop;
+x-scheme-handler/about=thorium-browser.desktop;
+x-scheme-handler/unknown=thorium-browser.desktop;
