@@ -1,81 +1,76 @@
 {
 	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 	"display": {
-		"separator": "➜   "
+		"separator": "➜ "
 	},
 	"modules": [
 		"break",
 		{
 			"type": "title",
-			"format": "                                {6}{7}{8}"
+			"format": "       {6}{7}{8}"
 		},
 		{
-			"key": "     OS           ",
+			"key": " OS       ",
 			"keyColor": "green",
 			"type": "os"
 		},
 		{
-			"key": "    󰌢 Machine      ",
+			"key": "󰌢 Machine  ",
 			"keyColor": "cyan",
 			"type": "host"
 		},
 		{
-			"key": "     Kernel       ",
+			"key": " Kernel   ",
 			"keyColor": "blue",
 			"type": "kernel"
 		},
 		{
-			"key": "    󰅐 Uptime       ",
+			"key": "󰅐 Uptime   ",
 			"keyColor": "green",
 			"type": "uptime"
 		},
 		{
-			"key": "     Packages     ",
+			"key": " Packages ",
 			"keyColor": "cyan",
 			"type": "packages"
 		},
 		{
-			"key": "     WM           ",
+			"key": " WM       ",
 			"keyColor": "blue",
 			"type": "wm"
 		},
 		{
-			"key": "     Shell        ",
+			"key": " Shell    ",
 			"keyColor": "green",
 			"type": "shell"
 		},
 		{
-			"key": "     Terminal     ",
+			"key": " Terminal ",
 			"keyColor": "cyan",
 			"type": "terminal"
 		},
 		{
-			"key": "     Font         ",
+			"key": " Font     ",
 			"keyColor": "blue",
 			"type": "terminalfont"
 		},
 		{
-			"key": "    󰻠 CPU          ",
+			"key": "󰻠 CPU      ",
 			"keyColor": "green",
 			"type": "cpu"
 		},
 		{
-			"key": "    󰍛 GPU          ",
+			"key": "󰍛 GPU      ",
 			"keyColor": "cyan",
 			"type": "gpu"
 		},
 		{
-			"key": "    󰑭 Memory       ",
+			"key": "󰑭 Memory   ",
 			"keyColor": "blue",
 			"type": "memory"
 		},
 		{
-			"key": "     Wifi         ",
-			"keyColor": "green",
-			"type": "wifi"
-		},
-		{
-			"key": "    󰩟 Local IP     ",
+			"key": "󰩟 Local IP ",
 			"keyColor": "cyan",
 			"type": "localip",
 			"compact": true
@@ -83,7 +78,7 @@
 		"break",
 		{
 			"type": "colors",
-			"paddingLeft": 34,
+			"paddingLeft": 7,
 			"symbol": "circle",
 			"block": {
 				"width": 10
