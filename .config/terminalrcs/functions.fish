@@ -97,3 +97,6 @@ end
 function fzfparu
     paru -Slq | fzf -m --preview 'paru -Si {1}; echo ""; echo "Files:"; paru -Fl {1} | awk "{print \$2}"' | xargs -ro paru -S
 end
+function randomfetch
+    sh ~/scripts/randomfetch.sh
+end

@@ -1,6 +1,6 @@
 ## Set values
 function fish_greeting
-    fastfetch
+    randomfetch
 end
 
 # Format man pages
