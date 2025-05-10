@@ -1,0 +1,18 @@
+set download-timeout 10
+set scrolloff 10
+# set initial-unread-first-sorting true
+set item-limit 100
+set menu-feed-sorting unread-desc
+
+set color-list-item-unread green default
+set color-list-section-unread green default
+set color-list-feed-unread green default
+
+bind s exec bm "%l"
+bind v exec rdr "%l"
+bind O exec setsid xdg-open "%l" &>/dev/null &
+
+bind o exec nohup thorium-browser "%l" >/dev/null 2>&1 &; mark-read
+
+bind v exec mpv "%l"
+bind i exec qimgv "%l"

@@ -1,17 +1,31 @@
 #!/bin/bash
 mkdir $HOME/.cache/wal 2>/dev/null
 cd ~/Pictures/wallpapers || exit
-#delete the cache if is more than half of the directory
-if [ $(wc -l <~/.cache/wal/wallpapers) -gt $(ls | wc -l) / 2 ]; then
-	rm -f ~/.cache/wal/wallpapers
+
+# Create wallpapers cache file if it doesn't exist
+touch ~/.cache/wal/wallpapers
+
+# Delete the cache if it contains more than half of the wallpapers
+wallpaper_count=$(ls | grep -E ".*\.(jpg|png|gif)" | wc -l)
+cache_count=$(wc -l < ~/.cache/wal/wallpapers)
+if [ $cache_count -gt $(($wallpaper_count / 2)) ]; then
+    rm -f ~/.cache/wal/wallpapers
+    touch ~/.cache/wal/wallpapers
 fi
+
 # Get a random wallpaper file, only jpg, png and gif files
 wallpaper=$(ls | grep -E ".*\.(jpg|png|gif)" | shuf -n 1)
-#check if the file is in the cache, if so we choose another
-while grep -q $wallpaper ~/.cache/wal/wallpapers; do
-	wallpaper=$(ls | grep -E ".*\.(jpg|png|gif)" | shuf -n 1)
+
+# Check if the file is in the cache, if so we choose another
+attempt=0
+max_attempts=20  # Prevent infinite loop if all wallpapers are in cache
+while grep -q "$wallpaper" ~/.cache/wal/wallpapers && [ $attempt -lt $max_attempts ]; do
+    wallpaper=$(ls | grep -E ".*\.(jpg|png|gif)" | shuf -n 1)
+    attempt=$((attempt + 1))
 done
-echo $wallpaper >~/.cache/wal/wallpapers
+
+# Add the selected wallpaper to the cache
+echo "$wallpaper" >> ~/.cache/wal/wallpapers
 
 #pick a random number between 0 and 1 to saturate the colorscheme
 saturate=$(awk -v min=0.2 -v max=1.0 'BEGIN{srand(); print min+rand()*(max-min)}')
