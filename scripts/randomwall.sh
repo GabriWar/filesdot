@@ -7,10 +7,10 @@ touch ~/.cache/wal/wallpapers
 
 # Delete the cache if it contains more than half of the wallpapers
 wallpaper_count=$(ls | grep -E ".*\.(jpg|png|gif)" | wc -l)
-cache_count=$(wc -l < ~/.cache/wal/wallpapers)
+cache_count=$(wc -l <~/.cache/wal/wallpapers)
 if [ $cache_count -gt $(($wallpaper_count / 2)) ]; then
-    rm -f ~/.cache/wal/wallpapers
-    touch ~/.cache/wal/wallpapers
+	rm -f ~/.cache/wal/wallpapers
+	touch ~/.cache/wal/wallpapers
 fi
 
 # Get a random wallpaper file, only jpg, png and gif files
@@ -18,17 +18,17 @@ wallpaper=$(ls | grep -E ".*\.(jpg|png|gif)" | shuf -n 1)
 
 # Check if the file is in the cache, if so we choose another
 attempt=0
-max_attempts=20  # Prevent infinite loop if all wallpapers are in cache
+max_attempts=20 # Prevent infinite loop if all wallpapers are in cache
 while grep -q "$wallpaper" ~/.cache/wal/wallpapers && [ $attempt -lt $max_attempts ]; do
-    wallpaper=$(ls | grep -E ".*\.(jpg|png|gif)" | shuf -n 1)
-    attempt=$((attempt + 1))
+	wallpaper=$(ls | grep -E ".*\.(jpg|png|gif)" | shuf -n 1)
+	attempt=$((attempt + 1))
 done
 
 # Add the selected wallpaper to the cache
-echo "$wallpaper" >> ~/.cache/wal/wallpapers
+echo "$wallpaper" >>~/.cache/wal/wallpapers
 
-#pick a random number between 0 and 1 to saturate the colorscheme
-saturate=$(awk -v min=0.2 -v max=1.0 'BEGIN{srand(); print min+rand()*(max-min)}')
+#pick a random number between 0.7 and 1 to saturate the colorscheme
+saturate=$(awk -v min=0.7 -v max=1.0 'BEGIN{srand(); print min+rand()*(max-min)}')
 # Print the selected wallpaper
 full_path=$(pwd)/$wallpaper
 #if path is passed as argument skip the above
@@ -42,7 +42,7 @@ echo wallpaper = ,$full_path >>~/.config/hypr/hyprpaper.conf
 echo splash = true >>~/.config/hypr/hyprpaper.conf
 echo ipc = false >>~/.config/hypr/hyprpaper.conf
 killall -q swww
-swww img $full_path --transition-type random --transition-step 10 --transition-fps 90
+swww img $full_path --transition-type random --transition-step 1 --transition-fps 90
 wal --saturate $saturate -q -i $full_path -n -e
 sh ~/.cache/wal/colors.sh
 killall -q swaync

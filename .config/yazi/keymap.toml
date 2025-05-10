@@ -796,7 +796,7 @@ run = [
 ''',
 ]
 [[manager.prepend_keymap]]
-on = ["<C-,>"]
+on = ["<C-l>"]
 run = 'shell --confirm "~/scripts/randomwall.sh $1 "'
 desc = "Set as wallpaper"
 [[manager.prepend_keymap]]
