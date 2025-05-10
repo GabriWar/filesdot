@@ -25,6 +25,12 @@ def resize_image(image_path, target_ratio, output_path=None):
             width, height = img.size
             current_ratio = width / height
             
+            # Check if the image already has the correct aspect ratio (with a small tolerance)
+            tolerance = 0.01  # 1% tolerance
+            if abs(current_ratio - target_ratio) / target_ratio < tolerance:
+                print(f"Skipping {image_path} as it already has the correct aspect ratio ({current_ratio:.4f})")
+                return True
+            
             # Calculate new dimensions to match target ratio
             if current_ratio > target_ratio:
                 # Image is too wide, keep the width and increase height

@@ -449,6 +449,7 @@
     "format": "{}  ",
     "return-type": "json",
     "on-click": "playerctl play-pause",
+    "on-click-right": "nohup $TERMINAL -e  lrcsnc && nohup $TERMINAL -e cava",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
   },
