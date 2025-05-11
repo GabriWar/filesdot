@@ -1,6 +1,17 @@
 #!/bin/bash
 mkdir $HOME/.cache/wal 2>/dev/null
-cd ~/Pictures/wallpapers || exit
+
+# Default wallpaper directory
+WALLPAPER_DIR="$HOME/Pictures/wallpapers"
+
+# Check if -n flag is passed
+if [ "$1" = "-n" ]; then
+	WALLPAPER_DIR="$HOME/Pictures/wallpapers/nsfw"
+	# Shift argument list to handle additional args properly
+	shift
+fi
+
+cd "$WALLPAPER_DIR" || exit
 
 # Create wallpapers cache file if it doesn't exist
 touch ~/.cache/wal/wallpapers
@@ -42,8 +53,5 @@ echo wallpaper = ,$full_path >>~/.config/hypr/hyprpaper.conf
 echo splash = true >>~/.config/hypr/hyprpaper.conf
 echo ipc = false >>~/.config/hypr/hyprpaper.conf
 killall -q swww
-swww img $full_path --transition-type random --transition-step 1 --transition-fps 90
-wal --saturate $saturate -q -i $full_path -n -e
-sh ~/.cache/wal/colors.sh
-killall -q swaync
-swaync &
+wal --saturate $saturate -q -i $full_path
+swww img $full_path --transition-type random --transition-fps 60
