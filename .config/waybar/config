@@ -112,7 +112,7 @@
   },
   "memory": {
     "interval": 10,
-    "format": "{used:>4.1f}/{total:<4.1f}"
+    "format": " {used:>4.1f}/{total:<4.1f}"
   },
   "group/group-power": {
     "orientation": "inherit",

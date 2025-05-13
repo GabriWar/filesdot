@@ -1,0 +1,25 @@
+# remap alt+ caps to esc lmao use evdevremapkeys -f /home/gabriwar/.config/evdevremapkeys/config.yaml or set systemd service as
+#   /usr/lib/systemd/system/evdevremapkeys.service
+#######################################
+#   [Service]
+#   WorkingDirectory=/tmp
+#   ExecStart=evdevremapkeys -f /home/gabriwar/.config/evdevremapkeys/config.yaml
+#   Restart=always
+#   PrivateTmp=true
+#   NoNewPrivileges=true
+#   
+#   
+#   [Install]
+#   WantedBy=multi-user.target
+#######################################
+# then enable and start via systemd and restart also check with systemctl status evdevremapkeys.service after restart
+devices:
+  - input_name: "AT Translated Set 2 keyboard"
+    output_name: remap-kbd
+    remappings:
+      KEY_LEFTALT:
+        - modifier_group: left_alt
+    modifier_groups:
+      left_alt:
+        KEY_CAPSLOCK:
+          - code: KEY_ESC
