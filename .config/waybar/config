@@ -397,8 +397,8 @@
       "critical": 20
     },
     "format": "{icon} {capacity}% {time}",
-    "format-charging": "󱐋{capacity}% {time}",
-    "format-plugged": "󱐋{capacity}% {time}",
+    "format-charging": "󱐋 {capacity}% {time}",
+    "format-plugged": "󱐋 {capacity}% {time}",
     "format-alt": " {time} {icon} {power}W",
     "format-icons": [
       "󰁻",
