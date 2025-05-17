@@ -6,7 +6,7 @@ configuration {
 /*	xoffset: 0;*/
 	/*fixed-num-lines: true;*/
 	show-icons: true;
-	terminal: "kitty";
+	terminal: "ghostty";
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
 run-command: "{cmd}";
@@ -17,8 +17,8 @@ window-match-fields: "all";
 /*	icon-theme: ;*/
 drun-match-fields: "all";
 /*	drun-categories: ;*/
-drun-show-actions: true;
-drun-display-format: "<span weight='bold'>{name}</span> [<span weight='light' size='large'><i>({generic})</i></span>]\n     {exec}\n     {categories}";
+/*drun-show-actions: true;*/
+drun-display-format: "<span weight='bold'>{name}</span> [<span weight='light' size='large'><i>({generic})</i></span>]\n {exec}";
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
@@ -29,9 +29,9 @@ drun-display-format: "<span weight='bold'>{name}</span> [<span weight='light' si
 /*	sidebar-mode: false;*/
 hover-select: true;
 /*	eh: 1;*/
-auto-select: true;
-/*	parse-hosts: false;*/
-/*	parse-known-hosts: true;*/
+/*auto-select: true;*/
+parse-hosts: true;
+parse-known-hosts: true;
 /*	combi-modes: "window,run";*/
 /*	matching: "normal";*/
 /*	tokenize: true;*/
@@ -165,7 +165,7 @@ window-format: "{w} {c} {t}";
     w-border: 9px solid;
     w-padding: 0px;
 }
-element-icon { size:8ch ; }
+element-icon { size:6ch ; }
 configuration {
     show-icons: true;
     display-drun: "  ";
@@ -186,8 +186,8 @@ listview {
 
 window {
     transparency: "real";
-    width: 1000px;
-    height: 750px;
+    width: 800px;
+    height: 650px;
     border-radius: @b-radius;
     border: @w-border;
     padding: @w-padding;

@@ -54,4 +54,4 @@ echo splash = true >>~/.config/hypr/hyprpaper.conf
 echo ipc = false >>~/.config/hypr/hyprpaper.conf
 killall -q swww
 wal --saturate $saturate -q -i $full_path
-swww img $full_path --transition-type random --transition-fps 60
+swww img $full_path --transition-type random
