@@ -112,7 +112,7 @@
   },
   "memory": {
     "interval": 10,
-    "format": "{used:>4.1f}/{total:<4.1f}"
+    "format": " {used:>4.1f}/{total:<4.1f}"
   },
   "group/group-power": {
     "orientation": "inherit",
@@ -430,7 +430,7 @@
       ]
     },
     "justify": "center",
-    "on-click-middle": "pavucontrol",
+    "on-click-middle": "pavucontrol & easyeffects",
     "on-click-right": "pactl set-source-mute 0 toggle",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
