@@ -50,7 +50,6 @@ echo preload = $full_path >>~/.config/hypr/hyprpaper.conf
 echo wallpaper = ,$full_path >>~/.config/hypr/hyprpaper.conf
 echo splash = true >>~/.config/hypr/hyprpaper.conf
 echo ipc = false >>~/.config/hypr/hyprpaper.conf
-killall -q swww
 
 # Random hellwal configuration
 hellwal_opts="-m"
@@ -75,7 +74,6 @@ hellwal -i $full_path $hellwal_opts
 
 swww img $full_path --transition-type random
 
-# Save hellwal and swww commands to lastrandomwall.txt with requested formatting
 # and keep only the last 5 commands
 {
 	# Create a temporary file
