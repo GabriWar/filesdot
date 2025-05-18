@@ -23,7 +23,7 @@ confirm-close-surface = false
 clipboard-paste-protection = false
 unfocused-split-opacity = 1.0
 
-theme="/home/gabriwar/.cache/wal/colors-ghostty"
+theme="/home/gabriwar/.cache/hellwal/colors-ghostty"
 foreground = #f4f4ff
 background = #151314
 cursor-color = #2233ee

@@ -222,4 +222,4 @@ message {
     border: 0px solid;
 }
 
-@import "~/.cache/wal/colors-rofi-pywal.rasi"
+@import "~/.cache/hellwal/colors-rofi-pywal.rasi"

@@ -1,7 +1,7 @@
 /* -----------------------------------------------------
  * Import Pywal colors 
  * ----------------------------------------------------- */
-@import "../../.cache/wal/colors-waybar.css";
+@import "../../.cache/hellwal/colors-waybar.css";
 
 @define-color backgroundlight @color5;
 @define-color backgrounddark @color11;
@@ -16,7 +16,7 @@
 @import "style2.css";
 /* needed for the mediaplayer */
 #custom-mediaplayer {
-  font-size: 16px;
-  border-radius: 2%;
+	font-size: 16px;
+	border-radius: 2%;
 }
 @import "./waybar-mediaplayer/src/style.css";

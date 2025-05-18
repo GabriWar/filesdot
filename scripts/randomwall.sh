@@ -38,8 +38,6 @@ done
 # Add the selected wallpaper to the cache
 echo "$wallpaper" >>~/.cache/wal/wallpapers
 
-#pick a random number between 0.7 and 1 to saturate the colorscheme
-saturate=$(awk -v min=0.7 -v max=1.0 'BEGIN{srand(); print min+rand()*(max-min)}')
 # Print the selected wallpaper
 full_path=$(pwd)/$wallpaper
 #if path is passed as argument skip the above
@@ -53,5 +51,54 @@ echo wallpaper = ,$full_path >>~/.config/hypr/hyprpaper.conf
 echo splash = true >>~/.config/hypr/hyprpaper.conf
 echo ipc = false >>~/.config/hypr/hyprpaper.conf
 killall -q swww
-wal --saturate $saturate -q -i $full_path
+
+# Random hellwal configuration
+hellwal_opts="-m"
+
+# Randomly choose mode (dark/light/color)
+mode_options=("--dark" "--color")
+selected_mode=${mode_options[$((RANDOM % 1))]}
+hellwal_opts="$hellwal_opts $selected_mode"
+
+# 50% chance to enable neon mode
+if [ $((RANDOM % 100)) -lt 50 ]; then
+	hellwal_opts="$hellwal_opts --neon-mode"
+fi
+
+# 10% chance to enable grayscale with random value
+if [ $((RANDOM % 100)) -lt 10 ]; then
+	hellwal_opts="$hellwal_opts --gray-scale 0.8"
+fi
+
+# Run hellwal with random options
+hellwal -i $full_path $hellwal_opts
+
 swww img $full_path --transition-type random
+
+# Save hellwal and swww commands to lastrandomwall.txt with requested formatting
+# and keep only the last 5 commands
+{
+	# Create a temporary file
+	temp_file=$(mktemp)
+
+	# If lastrandomwall.txt exists, copy its content to the temp file
+	if [ -f "$HOME/lastrandomwall.txt" ]; then
+		cat "$HOME/lastrandomwall.txt" >"$temp_file"
+	fi
+
+	# Add the new command group
+	{
+		echo "########################################"
+		echo "$(date "+%Y-%m-%d %H:%M:%S")"
+		echo "hellwal -i $full_path $hellwal_opts"
+		echo "swww img $full_path --transition-type random"
+		echo "########################################"
+		echo ""
+	} >>"$temp_file"
+
+	# Keep only the last 5 command groups (each group has 6 lines)
+	tail -n 30 "$temp_file" >"$HOME/lastrandomwall.txt"
+
+	# Remove the temporary file
+	rm "$temp_file"
+}
