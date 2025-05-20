@@ -155,6 +155,7 @@ window-format: "{w} {c} {t}";
   }
 }
 
+@import "~/.cache/hellwal/colors-rofi-pywal.rasi"
 
 * {
     font: "jetbrains mono 10";
@@ -165,7 +166,6 @@ window-format: "{w} {c} {t}";
     w-border: 9px solid;
     w-padding: 0px;
 }
-element-icon { size:6ch ; }
 configuration {
     show-icons: true;
     display-drun: "  ";
@@ -178,7 +178,7 @@ configuration {
 }
 listview {
     columns: 1;
-    lines: 17;
+    lines: 18;
     cycle: true;
     scrollbar: true;
     border: 0px solid;
@@ -187,16 +187,26 @@ listview {
 window {
     transparency: "real";
     width: 800px;
-    height: 650px;
+    height: 750px;
     border-radius: @b-radius;
     border: @w-border;
     padding: @w-padding;
 }
+  scrollbar {
+      width: 0px;
+      border-radius: @b-radius;
+      border: 0px solid;
+      padding: 0px;
+  }
 
 
 inputbar {
     children: ["prompt", "entry"];
     spacing: @g-spacing;
+    border: 0px solid;
+    border-radius: @b-radius;
+    padding: @g-padding;
+    margin: @g-margin;
 }
 
 entry {
@@ -217,9 +227,18 @@ element {
     border: 0px solid;
     border-radius: @b-radius;
 }
+element-text{
+  background-color: rgba(0,0,0,0);
+    padding: 0px;
+    border-radius: @b-radius;
+    border: 0px solid;
+}
+element-icon { 
+  size:6ch ;
+  background-color: rgba(0,0,0,0);
+}
 message {
 
     border: 0px solid;
 }
 
-@import "~/.cache/hellwal/colors-rofi-pywal.rasi"
