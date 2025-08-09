@@ -2,7 +2,7 @@
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
-[mgr]
+[manager]
 
 keymap = [
   { on = [
@@ -779,15 +779,15 @@ keymap = [
     "<C-o>",
   ], run = 'blobdrop $*', desc = "Paste the copied characters before the cursor" },
 ]
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = ["<C-s>"]
 run = 'shell "$SHELL"  --interactive'
 desc = "Open shell here"
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = ["<C-o>"]
 run = 'shell --confirm "blobdrop $*"'
 desc = "Paste the copied characters before the cursor"
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = ["y"]
 run = [
   "yank",
@@ -795,15 +795,15 @@ run = [
 	shell --confirm 'for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list'
 ''',
 ]
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = ["<C-l>"]
 run = 'shell --confirm "~/scripts/randomwall.sh $1 "'
 desc = "Set as wallpaper"
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = ["<C-x>"]
 run = 'shell --confirm "chmod +x $*"'
 desc = "make executable"
-[[mgr.prepend_keymap]]
+[[manager.prepend_keymap]]
 on = ["u"]
 run = '''
 shell --confirm '
