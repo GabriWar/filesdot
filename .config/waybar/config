@@ -8,6 +8,7 @@
     "group/video",
     "tray",
     "group/opened",
+    "hyprland/windowcount",
     "custom/updates",
     "custom/networking"
   ],
@@ -40,7 +41,8 @@
       "8": "8",
       "9": "9",
       "10": "10"
-    }
+    },
+      "move-to-monitor":1
   },
   "user": {
     "format": "{user}({work_H}:{work_M}:{work_S}↑)",
@@ -410,7 +412,8 @@
     ]
   },
   "hyprland/window": {
-    "format": "{class} {title}"
+    "format": "{class} {title}",
+    "separate-outputs":1
   },
   "pulseaudio": {
     "format-source-muted": "󰜺 ",
@@ -491,4 +494,8 @@
     "format": "{}",
     "max-length": 8,
     "tooltip": false
+},
+"hyprland/windowcount": {
+    "format": "{}",
+    "separate-outputs": true
 }}
