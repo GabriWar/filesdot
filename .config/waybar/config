@@ -4,6 +4,7 @@
   "modules-left": [
     "group/group-hours",
     "hyprland/workspaces",
+    "hyprland/submap",
     "group/video",
     "tray",
     "group/opened",
@@ -20,7 +21,6 @@
     "custom/mediaplayer",
     "pulseaudio",
     "network",
-    "custom/cpugpu",
     "custom/cpugpu2",
     "memory",
     "custom/notification",
@@ -486,4 +486,9 @@
     "interval": 3600,
     "exec": "wttrbar",
     "return-type": "json"
-  }}
+  },
+"hyprland/submap": {
+    "format": "{}",
+    "max-length": 8,
+    "tooltip": false
+}}

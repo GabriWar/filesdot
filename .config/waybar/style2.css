@@ -10,7 +10,8 @@ window#waybar {
   /* color: #FFFFFF; */
 }
 #waybar {
-  background: rgba(1, 1, 1, 0)}
+  background: rgba(1, 1, 1, 0);
+}
 
 /* -----------------------------------------------------
  * Workspaces 
@@ -105,12 +106,11 @@ window#waybar {
  * ----------------------------------------------------- */
 
 tooltip {
-   background-color: @transparent;
+  background-color: @transparent;
 }
 
 tooltip label {
   color: @textcolor2;
-  
 }
 
 /* -----------------------------------------------------
@@ -553,6 +553,12 @@ window#waybar.empty #window {
   animation-direction: alternate;
 }
 #custom-networking {
+  background-color: @backgroundlight;
+  color: @textcolor2;
+  border-radius: 100px;
+  padding: 0px 10px 0px 10px;
+}
+#submap {
   background-color: @backgroundlight;
   color: @textcolor2;
   border-radius: 100px;
