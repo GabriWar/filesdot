@@ -564,3 +564,16 @@ window#waybar.empty #window {
   border-radius: 100px;
   padding: 0px 10px 0px 10px;
 }
+
+#workspaces button.hosting-monitor {
+  background-color: @color14;
+  color: @textcolor2;
+  border-radius: 100px;
+}
+
+#windowcount {
+  background-color: @backgroundlight;
+  color: @textcolor2;
+  border-radius: 100px;
+  padding: 0px 10px 0px 10px;
+}
