@@ -5,7 +5,7 @@
 
 [general]
 home_row_keys=
-modes=floating,bisect,click
+#modes=floating,bisect,click
 cancellation_status_code=0
 
 [mode_tile]
