@@ -73,6 +73,7 @@ fi
 hellwal -i $full_path $hellwal_opts
 
 swww img $full_path --transition-type random
+swaync-client -rs
 
 # and keep only the last 5 commands
 {

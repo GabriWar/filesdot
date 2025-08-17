@@ -1,7 +1,6 @@
 @import "../../.cache/hellwal/colors-swaync.css";
-@define-color bgc
-  rgba(0, 0, 0, 0.1);
 
+@define-color bgc rgba(0, 0, 0, 0.1);
 @define-color textc rgba(255, 0, 0, 1);
 
 * {
@@ -10,6 +9,7 @@
   font-size: 14px;
 }
 
+/* Notification styling */
 .control-center .notification-row:focus,
 .control-center .notification-row:hover {
   opacity: 1;
@@ -27,7 +27,7 @@
   background: rgba(0, 0, 0, 0.2);
   margin: 0px;
   border-radius: 20px;
-  border-color: @color1;
+  border: 2px solid @color1;
 }
 
 .notification-content {
@@ -87,6 +87,7 @@
   color: @color7;
 }
 
+/* Control center */
 .control-center {
   background-color: @bgc;
   border-radius: 20px;
@@ -108,17 +109,15 @@
   background: alpha(black, 0.1);
 }
 
+/* Widget title */
 .widget-title {
   color: @color11;
   padding: 10px 10px;
   margin: 10px 10px 5px 10px;
   font-size: 1.5rem;
   border-radius: 20px;
-}
-
-.widget-volume {
-  border: 3px solid @color6;
-  border-radius: 10px;
+  background: @color0;
+  border: 2px solid @color1;
 }
 
 .widget-title > button {
@@ -126,45 +125,182 @@
   color: @color6;
   padding: 10px;
   text-shadow: none;
-  background: @bgc;
+  background: @color8;
   box-shadow: none;
   border-radius: 20px;
+  border: 2px solid @color1;
 }
 
 .widget-title > button:hover {
-  background: @color8;
+  background: @color10;
   color: @color5;
+  border: 2px solid @color5;
 }
 
+/* Volume widget */
+.widget-volume {
+  color: @color15;
+  background: @color0;
+  padding: 10px;
+  margin: 10px;
+  border: 3px solid @color6;
+  border-radius: 20px;
+}
+
+.widget-volume > box > label {
+  color: @color6;
+  font-size: 1.2rem;
+}
+
+.widget-volume scale {
+  color: @color6;
+}
+
+.widget-volume scale trough {
+  background: @color8;
+  border-radius: 10px;
+  border: 2px solid @color1;
+  min-height: 8px;
+}
+
+.widget-volume scale highlight {
+  background: linear-gradient(90deg, @color1, @color6);
+  border-radius: 8px;
+}
+
+.widget-volume scale slider {
+  background: @color6;
+  border: 2px solid @color1;
+  border-radius: 50%;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.widget-volume scale slider:hover {
+  background: @color5;
+  border: 2px solid @color5;
+}
+
+.widget-volume button {
+  background: @color8;
+  color: @color6;
+  border-radius: 15px;
+  border: 2px solid @color1;
+  padding: 5px;
+  margin: 2px;
+}
+
+.widget-volume button:hover {
+  background: @color10;
+  color: @color5;
+  border: 2px solid @color5;
+}
+
+/* Per-app volume controls */
+.per-app-volume {
+  background: @color8;
+  border-radius: 15px;
+  border: 2px solid @color1;
+  margin: 5px;
+  padding: 5px;
+}
+
+/* Backlight widget */
+.widget-backlight {
+  color: @color15;
+  background: @color0;
+  padding: 10px;
+  margin: 10px;
+  border: 3px solid @color4;
+  border-radius: 20px;
+}
+
+.widget-backlight > box > label {
+  color: @color4;
+  font-size: 1.2rem;
+}
+
+.widget-backlight scale trough {
+  background: @color8;
+  border-radius: 10px;
+  border: 2px solid @color1;
+  min-height: 8px;
+}
+
+.widget-backlight scale highlight {
+  background: linear-gradient(90deg, @color1, @color4);
+  border-radius: 8px;
+}
+
+.widget-backlight scale slider {
+  background: @color4;
+  border: 2px solid @color1;
+  border-radius: 50%;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.widget-backlight scale slider:hover {
+  background: @color12;
+  border: 2px solid @color12;
+}
+
+/* DND widget */
 .widget-dnd {
   padding: 10px 10px;
   margin: 10px 10px 10px 10px;
   border-radius: 20px;
   font-size: large;
-  color: @color0;
+  color: @color15;
+  background: @color0;
+  border: 2px solid @color2;
 }
 
 .widget-dnd > switch {
   border-radius: 20px;
-  background: @color5;
+  background: @color8;
+  border: 2px solid @color1;
 }
 
 .widget-dnd > switch:checked {
   background: @color2;
+  border: 2px solid @color2;
 }
 
 .widget-dnd > switch slider {
-  background: @bgc;
+  background: @color6;
   border-radius: 10px;
+  border: 2px solid @color1;
 }
 
 .widget-dnd > switch:checked slider {
-  background: @bgc;
+  background: @color15;
   border-radius: 10px;
+  border: 2px solid @color15;
 }
 
+/* Inhibitors widget */
+.widget-inhibitors {
+  color: @color15;
+  background: @color0;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid @color9;
+  border-radius: 20px;
+}
+
+.widget-inhibitors > box > label {
+  color: @color9;
+  font-size: 1.2rem;
+}
+
+/* Label widget */
 .widget-label {
   margin: 10px 10px 10px 10px;
+  background: @color0;
+  border: 2px solid @color3;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .widget-label > label {
@@ -172,18 +308,179 @@
   color: @color11;
 }
 
+/* MPRIS widget */
 .widget-mpris {
   color: @color3;
-  padding: 5px 5px 5px 5px;
+  background: @color0;
+  padding: 10px;
   margin: 10px;
+  border: 3px solid @color3;
   border-radius: 20px;
 }
 
 .widget-mpris > box > button {
   border-radius: 20px;
+  background: @color8;
+  color: @color3;
+  border: 2px solid @color1;
+  padding: 8px;
+  margin: 2px;
+}
+
+.widget-mpris > box > button:hover {
+  background: @color10;
+  color: @color5;
+  border: 2px solid @color5;
 }
 
 .widget-mpris-player {
   padding: 5px 5px;
   margin: 10px;
+  background: @color8;
+  border-radius: 15px;
+  border: 2px solid @color1;
+}
+
+.widget-mpris-title {
+  color: @color6;
+  font-weight: bold;
+}
+
+.widget-mpris-subtitle {
+  color: @color7;
+}
+
+/* Menubar widget */
+.widget-menubar {
+  background: @color0;
+  border: 2px solid @color5;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.widget-menubar > box > .menu-button-bar {
+  background: transparent;
+}
+
+.widget-menubar button {
+  background: @color8;
+  color: @color5;
+  border: 2px solid @color1;
+  border-radius: 15px;
+  padding: 8px 12px;
+  margin: 2px;
+}
+
+.widget-menubar button:hover {
+  background: @color10;
+  color: @color15;
+  border: 2px solid @color5;
+}
+
+.widget-menubar .menu-button-bar popover {
+  background: @color0;
+  border: 2px solid @color5;
+  border-radius: 15px;
+}
+
+.widget-menubar .menu-button-bar popover button {
+  background: @color8;
+  color: @color15;
+  border: 1px solid @color1;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.widget-menubar .menu-button-bar popover button:hover {
+  background: @color10;
+  color: @color5;
+  border: 1px solid @color5;
+}
+
+/* Buttons grid widget */
+.widget-buttons {
+  background: transparent;
+  border: none;
+  margin: 10px;
+  padding: 10px;
+}
+
+.widget-buttons > flowbox > flowboxchild > button {
+  background: @color8;
+  color: @color4;
+  border: 2px solid @color1;
+  border-radius: 15px;
+  padding: 12px;
+  margin: 5px;
+  font-size: 1rem;
+}
+
+.widget-buttons > flowbox > flowboxchild > button:hover {
+  background: @color10;
+  color: @color15;
+  border: 2px solid @color4;
+}
+
+.widget-buttons > flowbox > flowboxchild > button.active {
+  background: @color4;
+  color: @color0;
+  border: 2px solid @color4;
+}
+
+/* Slider widget */
+.widget-slider {
+  color: @color15;
+  background: @color0;
+  padding: 10px;
+  margin: 10px;
+  border: 3px solid @color12;
+  border-radius: 20px;
+}
+
+.widget-slider > box > label {
+  color: @color12;
+  font-size: 1.2rem;
+}
+
+.widget-slider scale trough {
+  background: @color8;
+  border-radius: 10px;
+  border: 2px solid @color1;
+  min-height: 8px;
+}
+
+.widget-slider scale highlight {
+  background: linear-gradient(90deg, @color1, @color12);
+  border-radius: 8px;
+}
+
+.widget-slider scale slider {
+  background: @color12;
+  border: 2px solid @color1;
+  border-radius: 50%;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.widget-slider scale slider:hover {
+  background: @color13;
+  border: 2px solid @color13;
+}
+
+/* Scrollbars */
+scrollbar {
+  background: @color8;
+  border-radius: 10px;
+}
+
+scrollbar slider {
+  background: @color1;
+  border-radius: 8px;
+  border: 1px solid @color1;
+}
+
+scrollbar slider:hover {
+  background: @color6;
+  border: 1px solid @color6;
 }
