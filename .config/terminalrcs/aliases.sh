@@ -60,6 +60,7 @@ alias cdz='z $(fzf)'                                                            
 alias zf='fd --type f | fzf --preview "bat --color=always {}"'                                                                                          # fuzzy search files with preview
 alias gpp='g++ -g -Wall -Wextra -gdwarf-4'                                                                                                              # g++ with debugging flags
 alias n='$HOME/scripts/notfiy.sh'                                                                                                                       # run notification script
+alias portss='$HOME/scripts/portsrun.sh'                                                                                                                # check ports
 alias q='exit'                                                                                                                                          # quick exit
 alias lssizes='du -h | sort -h'                                                                                                                         # list files/dirs by size
 alias lssize='du -achd1 | sort -h'                                                                                                                      # list first-level dirs by size

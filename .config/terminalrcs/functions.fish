@@ -100,3 +100,9 @@ end
 function randomfetch
     sh ~/scripts/randomfetch.sh
 end
+
+function ffsmall
+    set input $argv[1]
+    set output (string replace -r '\.[^.]*$' '_small.mp4' $input)
+    ffmpeg -i "$input" -c:v libx264 -preset slow -crf 23 -c:a aac -b:a 128k -movflags +faststart "$output"
+end
