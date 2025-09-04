@@ -83,3 +83,4 @@ alias webserver='python -m http.server 8000'                                    
 alias watch='watch -n1 -d'                                                                                                                              # watch with 1s updates and highlighting
 alias extbin='binwalk -veMa'                                                                                                                            #extract.bin files
 alias wheretf='paru -Ql'                                                                                                                                #shows files from the package
+alias ffmsmall='./~/scripts/ffmsall.sh'
