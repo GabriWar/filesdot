@@ -8,7 +8,7 @@ if [ "$HYPRGAMEMODE" = 1 ]; then
         keyword animations:enabled 0;\
         keyword decoration:shadow:range 2;\
         keyword decoration:blur:enabled 0;\
-        keyword decoration:inactive_opacity 0.6\
+        keyword decoration:inactive_opacity 1\
         keyword general:gaps_in 0;\
         keyword general:gaps_out 0;\
         keyword animation borderangle,0; \
