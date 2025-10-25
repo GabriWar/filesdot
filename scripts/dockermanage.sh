@@ -98,7 +98,8 @@ show_menu() {
     echo "4. Gerenciar volumes"
     echo "5. Gerenciar redes"
     echo "6. Limpeza geral (remover recursos não utilizados)"
-    echo "7. Sair"
+    echo -e "${RED}7. Limpeza COMPLETA (TUDO)${NC}"
+    echo "8. Sair"
     echo
 }
 
@@ -386,6 +387,42 @@ cleanup_docker() {
     fi
 }
 
+# Função para limpeza COMPLETA - TUDO
+cleanup_all_docker() {
+    echo -e "${RED}=== LIMPEZA COMPLETA - TUDO ===${NC}"
+    echo -e "${RED}ATENÇÃO: Esta opção irá remover ABSOLUTAMENTE TUDO:${NC}"
+    echo "- Todos os containers (rodando e parados)"
+    echo "- Todas as imagens"
+    echo "- Todos os volumes"
+    echo "- Todas as redes"
+    echo "- Todo o cache do sistema"
+    echo
+    echo -e "${YELLOW}Esta ação é IRREVERSÍVEL!${NC}"
+    echo
+    read -p "Tem CERTEZA ABSOLUTA que deseja executar a limpeza COMPLETA? Digite 'TUDO' para confirmar: " confirm
+    if [[ $confirm == "TUDO" ]]; then
+        echo -e "${RED}Executando limpeza COMPLETA...${NC}"
+        echo
+        
+        echo "1. Parando todos os containers..."
+        docker stop $(docker ps -a -q) 2>/dev/null || echo "Nenhum container para parar"
+        
+        echo "2. Removendo todos os containers..."
+        docker rm $(docker ps -a -q) 2>/dev/null || echo "Nenhum container para remover"
+        
+        echo "3. Removendo todas as imagens..."
+        docker rmi $(docker images -a -q) 2>/dev/null || echo "Nenhuma imagem para remover"
+        
+        echo "4. Limpando sistema completo (volumes, redes, cache)..."
+        docker system prune -a --volumes -f
+        
+        echo
+        echo -e "${GREEN}Limpeza COMPLETA concluída! TUDO foi removido!${NC}"
+    else
+        echo -e "${YELLOW}Limpeza cancelada.${NC}"
+    fi
+}
+
 # Função principal
 main() {
     show_header
@@ -418,6 +455,9 @@ main() {
                 cleanup_docker
                 ;;
             7)
+                cleanup_all_docker
+                ;;
+            8)
                 echo -e "${GREEN}Saindo... Até logo!${NC}"
                 exit 0
                 ;;
